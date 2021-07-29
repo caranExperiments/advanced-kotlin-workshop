@@ -1,0 +1,29 @@
+<html>
+
+<h2>CoroutineContext and Dispatchers</h2>
+<p>Coroutines are executed within a <em>CoroutineContext</em> which is comprised of two key components</p>
+<ol>
+    <li>Job</li>
+    <li>Dispatcher</li>
+</ol>
+<p>We've seen that a <em>Job</em> is a handle to a coroutine and allows us to cancel or wait on a coroutine.</p>
+<p>The <em>Dispatcher</em> determines which thread will be used for execution of the coroutine.</p>
+<p>By passing different dispatchers to our coroutine builders, we can control which threads are used to execute the coroutines.</p>
+
+<br>
+<h3>💡 Helpful Resources</h3>
+<ul>
+    <li> <a href="https://kotlinlang.org/docs/coroutine-context-and-dispatchers.html#dispatchers-and-threads">Dispatchers and Threads</a> </li>
+</ul>
+
+<br>
+<h3>📝 Instructions</h3>
+<p>Run the code and observe the output</p>
+
+<br>
+<h3>🤔 Observations</h3>
+<ul>
+    <li>How do the execution threads differ based on the <em>Dispatcher</em> passed to the <em>launch{}</em> function?</li>
+</ul>
+
+</html>

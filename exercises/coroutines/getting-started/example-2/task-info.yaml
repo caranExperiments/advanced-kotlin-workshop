@@ -1,0 +1,12 @@
+type: output
+custom_name: Coroutines Suspend from Calling Thread
+files:
+- name: src/Main.kt
+  visible: true
+  placeholders:
+  - offset: 187
+    length: 17
+    placeholder_text: TODO(" Make the calling Thread sleep to give coroutine time
+      to execute ")
+- name: test/output.txt
+  visible: false

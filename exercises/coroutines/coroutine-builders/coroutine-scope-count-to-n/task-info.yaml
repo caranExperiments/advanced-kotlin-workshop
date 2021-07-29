@@ -1,0 +1,11 @@
+custom_name: coroutineScope{}
+type: output
+files:
+- name: src/Main.kt
+  visible: true
+  placeholders:
+  - offset: 271
+    length: 67
+    placeholder_text: TODO(" Print values from 0 to N - 1 per second ")
+- name: test/output.txt
+  visible: false

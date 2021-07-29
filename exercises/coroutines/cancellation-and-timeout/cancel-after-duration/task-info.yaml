@@ -1,0 +1,12 @@
+custom_name: Cancel Job
+type: output
+files:
+- name: src/Main.kt
+  visible: true
+  placeholders:
+  - offset: 258
+    length: 43
+    placeholder_text: TODO(" Suspend execution until job completes and cancel job
+      after 2.5 seconds ")
+- name: test/output.txt
+  visible: false

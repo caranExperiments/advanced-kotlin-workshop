@@ -1,0 +1,27 @@
+<html>
+
+<h2>Waiting on Jobs</h2>
+<p>How do we suspend execution until all coroutines within a <em>launch{}</em> call complete?</p>
+<p>Calling <em>launch{}</em> returns a <em>Job</em> which can be used to cancel the coroutines or to suspend execution until all coroutines within the <em>Job</em> have completed.</p>
+<p>Calling <em>Job.join()</em> will suspend a coroutine until the <em>Job</em> is completed.</p>
+<br>
+<h3>💡 Helpful Resources</h3>
+<ul>
+    <li> <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-job/index.html">Job Reference</a> </li>
+    <li> <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-job/join.html">Job.join() Reference</a> </li>
+    <li> <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/launch.html">launch{} Reference</a> </li>
+</ul>
+
+<br>
+<h3>📝 Instructions</h3>
+<p>Update the implementation of <em>main()</em> so that "Done counting" is printed last</p>
+<p>Do so by getting a reference to the <em>Job</em> returned by <em>launch{}</em> and calling <em>Job.join()</em> before "Done counting".</p>
+
+<br>
+<h3>🤔 Observations</h3>
+<ul>
+    <li>Notice that when initially run, "Done counting" is printed out immediately, and then the counting beings.</li>
+    <li>Why do you think that is?</li>
+</ul>
+
+</html>

@@ -1,0 +1,12 @@
+type: theory
+files:
+- name: src/Main.kt
+  visible: true
+- name: src/ValidationError.kt
+  visible: true
+- name: src/Rules.kt
+  visible: true
+- name: src/Email.kt
+  visible: true
+- name: src/EmailField.kt
+  visible: true

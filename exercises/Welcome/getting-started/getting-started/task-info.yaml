@@ -1,0 +1,11 @@
+custom_name: Getting Started
+type: edu
+files:
+- name: src/Task.kt
+  visible: true
+  placeholders:
+  - offset: 32
+    length: 4
+    placeholder_text: TODO("Are you ready to start?")
+- name: test/Tests.kt
+  visible: false

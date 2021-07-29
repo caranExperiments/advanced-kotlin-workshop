@@ -1,0 +1,14 @@
+custom_name: StateFlow
+type: output
+files:
+- name: src/Main.kt
+  visible: true
+  placeholders:
+  - offset: 779
+    length: 28
+    placeholder_text: TODO()
+  - offset: 833
+    length: 28
+    placeholder_text: TODO()
+- name: test/output.txt
+  visible: false

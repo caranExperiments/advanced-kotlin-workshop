@@ -1,0 +1,9 @@
+type: theory
+custom_name: SharedFlow
+files:
+- name: src/Main.kt
+  visible: true
+  placeholders:
+  - offset: 399
+    length: 64
+    placeholder_text: TODO("Define the lastLocation property override")

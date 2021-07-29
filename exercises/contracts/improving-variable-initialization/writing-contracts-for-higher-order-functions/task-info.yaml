@@ -1,0 +1,18 @@
+type: output
+custom_name: Writing Contracts for Higher Order Functions
+files:
+- name: src/Main.kt
+  visible: true
+  placeholders:
+  - offset: 329
+    length: 62
+    placeholder_text: TODO("Provide a contract indicating that config will be called")
+  - offset: 540
+    length: 58
+    placeholder_text: TODO(" screenTitle = if(state is State.Success) state.msg else
+      "" ")
+  - offset: 618
+    length: 11
+    placeholder_text: TODO(" screenTitle ")
+- name: test/output.txt
+  visible: false

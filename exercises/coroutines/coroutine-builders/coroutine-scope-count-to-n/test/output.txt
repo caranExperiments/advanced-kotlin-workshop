@@ -1,0 +1,6 @@
+Start counting
+0
+1
+2
+3
+Done counting

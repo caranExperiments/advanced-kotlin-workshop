@@ -1,0 +1,11 @@
+custom_name: runBlocking{}
+type: output
+files:
+- name: src/Main.kt
+  visible: true
+  placeholders:
+  - offset: 182
+    length: 12
+    placeholder_text: TODO(" Call helloWorld() ")
+- name: test/output.txt
+  visible: false

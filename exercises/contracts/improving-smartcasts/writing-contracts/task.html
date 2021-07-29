@@ -1,0 +1,28 @@
+<html>
+
+<h2>Writing Contracts 1</h2>
+
+<h4>💡 Helpful Resources</h4>
+<ul>
+    <li> <a href="https://kotlinlang.org/docs/whatsnew13.html#contracts">Kotlin Contracts in Kotlin 1.3</a> </li>
+    <li> <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.contracts/-contract-builder/">ContractBuilder Reference</a> </li>
+    <li> <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.contracts/-contract-builder/returns.html">returns() Reference</a> </li>
+    <li> <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.contracts/-simple-effect/">SimpleEffect (implies()) Reference</a> </li>
+</ul>
+
+<p>In this example, we've returned to our <em>isNull()</em> function, and added our first contract.</p>
+
+<p>There are three items of interest here</p>
+<ul>
+    <li>The <em>contract{}</em> function provides a <em>ContractBuilder</em></li>
+    <li>The <em>returns(false)</em> indicates that the provided implication applies for a given return value
+        <em>false</em></li>
+    <li>The <em>implies(this@isNull != null)</em> call indicates that when <em>isNull()</em> returns <em>false</em>, the
+        compiler may infer that whatever receiver called <em>isNull()</em> is not null.
+    </li>
+</ul>
+
+<p>Notice that after providing the contract, the compiler can now smartcast <em>name</em> after calling
+    <em>isNull()</em> and we no longer need the null-safe call when accessing <em>name.length</em>.</p>
+
+</html>

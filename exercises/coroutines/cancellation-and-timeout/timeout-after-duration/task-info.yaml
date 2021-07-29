@@ -1,0 +1,11 @@
+custom_name: Run With Timeout
+type: output
+files:
+- name: src/Main.kt
+  visible: true
+  placeholders:
+  - offset: 124
+    length: 147
+    placeholder_text: TODO(" Call countToN(5) with a timeout of 2500ms ")
+- name: test/output.txt
+  visible: false

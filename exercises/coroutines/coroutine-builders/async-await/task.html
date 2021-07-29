@@ -1,0 +1,30 @@
+<html>
+
+<h2>Async/Await</h2>
+<p>We've seen that code within a coroutine is sequential by default - suspending functions will be executed in order within the coroutine.</p>
+<p>But what if we want to run two tasks in parallel?</p>
+<br>
+<p>To run multiple tasks concurrently, we can use the <em>async{}</em> coroutine builder.</p>
+<p><em>async{}</em> aligns with the async/await conventions from languages such as C# and Javascript.</p>
+<p>Calling <em>async{}</em> will return to us a <em>Deferred</em> which we can then use to <em>await()</em> the completion of the suspending task.</p>
+
+<br>
+<h3>💡 Helpful Resources</h3>
+<ul>
+    <li> <a href="https://kotlinlang.org/docs/composing-suspending-functions.html#concurrent-using-async">Current Using Async</a> </li>
+    <li> <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/async.html">async{} Reference</a> </li>
+    <li> <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/await.html">await() Reference</a> </li>
+</ul>
+
+<br>
+<h3>📝 Instructions</h3>
+<p>Using the <em>async{}</em> coroutine builder, refactor <em>main()</em> to carry out its calculations in parallel</p>
+
+<br>
+<h3>🤔 Observations</h3>
+<ul>
+    <li>Notice that when initially run, <em>main()</em> takes ~2 seconds to complete.</li>
+    <li>After applying the async/await pattern, <em>main()</em> should take ~1 seconds to complete.</li>
+</ul>
+
+</html>

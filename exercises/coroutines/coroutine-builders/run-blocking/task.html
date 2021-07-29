@@ -1,0 +1,29 @@
+<html>
+
+<h2>Bridging Between Non-Coroutine Code Using runBlocking{}</h2>
+<p>In our examples so far, we've had to explicitly block the calling thread to ensure our coroutines complete.</p>
+<p>This isn't ideal though.  What can we do to improve this?</p>
+<br>
+<p>We can introduce the concept of a <em>Coroutine Builder</em> to address this.</p>
+<p>We've already seen one coroutine builder - <em>launch{}</em></p>
+<p>We'll now look at another builder - <em>runBlocking{}</em></p>
+<br>
+<p>The <em>runBlocking{}</em> function runs a new coroutine that blocks the current thread until the coroutine's completion.</p>
+
+<br>
+<h3>💡 Helpful Resources</h3>
+<ul>
+    <li> <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/run-blocking.html">runBlocking{} Reference</a> </li>
+</ul>
+
+<br>
+<h3>📝 Instructions</h3>
+<p>Replace the implementation of <em>main()</em> to use <em>runBlocking{}</em></p> to avoid the explicit call to <em>Thread.sleep()</em>
+
+<br>
+<h3>🤔 Observations</h3>
+<ul>
+    <li> Notice that now, we don't need any explicit code to sleep/delay our main thread. </li>
+</ul>
+
+</html>

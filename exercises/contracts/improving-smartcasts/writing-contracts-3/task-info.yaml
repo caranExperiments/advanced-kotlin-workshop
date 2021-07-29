@@ -1,0 +1,14 @@
+type: output
+custom_name: Writing Contracts 3
+files:
+- name: src/Main.kt
+  visible: true
+  placeholders:
+  - offset: 326
+    length: 157
+    placeholder_text: TODO("Implement a contract")
+  - offset: 603
+    length: 9
+    placeholder_text: TODO("Use state.msg once the contract is in place")
+- name: test/output.txt
+  visible: false

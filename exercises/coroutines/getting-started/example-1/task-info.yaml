@@ -1,0 +1,11 @@
+custom_name: Calling a Suspending Function
+type: output
+files:
+- name: src/Main.kt
+  visible: true
+  placeholders:
+  - offset: 147
+    length: 35
+    placeholder_text: TODO(" Use GlobalScope.launch{} to call helloWorld() ")
+- name: test/output.txt
+  visible: false

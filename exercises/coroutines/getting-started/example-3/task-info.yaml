@@ -1,0 +1,11 @@
+custom_name: Delaying a Suspending Function
+type: output
+files:
+- name: src/Main.kt
+  visible: true
+  placeholders:
+  - offset: 135
+    length: 11
+    placeholder_text: TODO(" Add a delay(1000) ")
+- name: test/output.txt
+  visible: false

@@ -1,0 +1,14 @@
+<html>
+
+<h2>Writing Helper Functions</h2>
+
+<p>Observe the <em>isNull()</em> extension function defined here.</p>
+
+<p>This function attempts to provide a convenient syntax for checking whether a variable/property is <em>null</em> or not</p>
+
+<p>Notice, that we check the value of <em>name.isNull()</em> and return, but still have to perform a null-safe call when accessing <em>name.length</em> after checking <em>isNull()</em>.</p>
+
+<p>The Kotlin compiler doesn't know that our <em>isNull()</em> method returning <em>false</em> infers that our variable is not null, and that the compiler could then smartcast <em>name</em> to a non-null type.</p>
+
+<p>This is one of the major problems Kotlin's Contract apis can help us address</p>
+</html>

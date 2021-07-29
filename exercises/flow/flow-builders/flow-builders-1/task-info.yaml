@@ -1,0 +1,11 @@
+type: output
+custom_name: flow{}
+files:
+- name: src/Main.kt
+  visible: true
+  placeholders:
+  - offset: 358
+    length: 75
+    placeholder_text: TODO()
+- name: test/output.txt
+  visible: false

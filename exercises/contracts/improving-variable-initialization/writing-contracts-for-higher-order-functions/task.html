@@ -1,0 +1,19 @@
+<html>
+
+<h2>Writing Contracts for Higher Order Functions</h2>
+
+<p>When working with higher order functions, the compiler can make certain checks/optimizations if it knows that a functional parameter will be called - and how many times it may be called.</p>
+
+<p>In this example, the <em>screenTitle</em> variable cannot be initially assigned within the <em>setup{}</em> block because the compiler cannot ensure that it will be invoked.</p>
+
+<p>By providing a contract within the <em>setup()</em> function, we can tell the compiler that the <em>config</em> function parameter will be executed exactly once.</p>
+
+<p>With that in place, the compiler can then allow the initialization of <em>screenTitle</em>.</p>
+
+<h4>💡 Helpful Resources</h4>
+<ul>
+    <li> <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.contracts/-contract-builder/calls-in-place.html">callsInPlace() Reference</a> </li>
+    <li> <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.contracts/-invocation-kind/">InvocationKind Reference</a> </li>
+</ul>
+
+</html>

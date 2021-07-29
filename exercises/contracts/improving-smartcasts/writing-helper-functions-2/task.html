@@ -1,0 +1,18 @@
+<html>
+
+<h2>Writing Helper Functions 2</h2>
+
+<p>In this example, we've defined another helper function <em>isNotNullOrBlank()</em> by negating the value return from
+    standard library function <em>isNullOrBlank()</em>.</p>
+
+<p>While <em>isNullOrBlank()</em> may helper the compiler infer nullability (thanks to Contracts), the compiler cannot
+    extend those inferences to a function calling into another function that includes a contract.</p>
+
+<p>This highlights the need for helper functions to define their own contracts - rather than relying on the contracts of
+    functions they may use in their implementation.</p>
+
+<h3>Improving Compiler Inferences</h3>
+<p>In the next examples, we'll improve these helper functions by making use of Kotlin's Contract apis.</p>
+<p>By defining a contract, we'll be able to avoid the additional null-safe calls when accessing our <em>name</em>
+    variable after calling our helper functions.</p>
+</html>

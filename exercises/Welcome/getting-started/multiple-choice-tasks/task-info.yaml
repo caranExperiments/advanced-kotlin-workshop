@@ -1,0 +1,15 @@
+custom_name: Multiple-Choice Tasks
+type: choice
+is_multiple_choice: false
+options:
+- text: Hello World
+  is_correct: false
+- text: Hello World!
+  is_correct: true
+- text: Hello Kotlin!
+  is_correct: false
+message_correct: That's Right!
+message_incorrect: Incorrect. Double check the String passed to println()
+files:
+- name: src/Main.kt
+  visible: true

@@ -1,0 +1,12 @@
+custom_name: Hello Flow
+type: output
+files:
+- name: src/Main.kt
+  visible: true
+  placeholders:
+  - offset: 306
+    length: 49
+    placeholder_text: TODO(" Print the items returned from getProgrammingLanguages()
+      ")
+- name: test/output.txt
+  visible: false

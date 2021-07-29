@@ -1,0 +1,27 @@
+<html>
+
+<h2>Unhandled Errors Propagate to Parent and Siblings</h2>
+<p>An unhandled exception will propagate up to the parent scope which will then cancel any other child coroutines.</p>
+<p>If running multiple tasks within a given scope, if one failing should not impact the others, this behavior is not ideal.</p>
+<p>How then can we prevent errors from propagating to the parent scope and sibling coroutines?</p>
+<br>
+<p>The first choice is to handle known exceptions using try/catch</p>
+<p>Additionally, we can launch coroutines within a <em>CoroutineScope</em> created using a <em>SupervisorJob</em>.</p>
+<p>A <em>SupervisorJob</em> will not fail, or cancel all children, when a child fails.</p>
+
+<br>
+<h3>💡 Helpful Resources</h3>
+<ul>
+    <li> <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-supervisor-job.html">SupervisorJob</a> </li>
+</ul>
+
+<br>
+<h3>📝 Instructions</h3>
+<p>Create a custom <em>CoroutineScope</em> using a <em>SupervisorJob</em> that prevent the parent scope from failing and preventing the "Finished" message being printed to the console.</p>
+
+<br>
+<h3>🤔 Observations</h3>
+<ul>
+    <li>What happens if we do not use a <em>SupervisorJob</em>?</li>
+</ul>
+</html>

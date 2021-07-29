@@ -1,0 +1,11 @@
+custom_name: SupervisorJobs
+type: output
+files:
+- name: src/Main.kt
+  visible: true
+  placeholders:
+  - offset: 325
+    length: 31
+    placeholder_text: TODO("Define a custom CoroutineScope using a SupervisorJob")
+- name: test/output.txt
+  visible: false

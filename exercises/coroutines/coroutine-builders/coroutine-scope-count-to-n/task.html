@@ -1,0 +1,25 @@
+<html>
+
+<h2>Launch, and Wait, for Multiple Coroutines</h2>
+<p>What if we want to call a suspending function that completes only once all its child coroutines complete?</p>
+<p>To accomplish this, we can turn to another coroutine builder - <em>coroutineScope{}</em></p>
+<br>
+<p>The <em>coroutineScope{}</em> builder returns once it, and all its children complete.</p>
+
+<br>
+<h3>💡 Helpful Resources</h3>
+<ul>
+    <li> <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/coroutine-scope.html">coroutineScope{} Reference</a> </li>
+</ul>
+
+<br>
+<h3>📝 Instructions</h3>
+<p>Within the call to <em>coroutineScope{}</em>, launch one coroutine per second for numbers 0 to N</p>
+
+<br>
+<h3>🤔 Observations</h3>
+<ul>
+    <li>Notice how <em>countToN()</em> only completes, and <em>main()</em> finishes, once all coroutines are completed.</li>
+</ul>
+
+</html>

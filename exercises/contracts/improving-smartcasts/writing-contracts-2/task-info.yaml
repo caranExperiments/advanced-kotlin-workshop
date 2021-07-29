@@ -1,0 +1,14 @@
+type: output
+custom_name: Writing Contracts 2
+files:
+- name: src/Main.kt
+  visible: true
+  placeholders:
+  - offset: 163
+    length: 105
+    placeholder_text: TODO("Implement this method with a valid contract")
+  - offset: 380
+    length: 11
+    placeholder_text: TODO("Use name.length once contract is in place)
+- name: test/output.txt
+  visible: false

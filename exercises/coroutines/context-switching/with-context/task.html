@@ -1,0 +1,27 @@
+<html>
+
+<h2>Changing Context</h2>
+<p>What if we want to carry out some operation on a background thread, and then process the result on another thread?</p>
+<p>We can use the <em>withContext()</em> function to move execution of a coroutine onto a new thread of execution by specifying a new coroutine context</p>
+<br>
+<p>To specify the new context, we can use one of several <em>Dispatchers</em></p>
+<ul>
+    <li>Dispatchers.Default</li>
+    <li>Dispatchers.IO</li>
+    <li>Dispatchers.Main (if using Android or other UI framework)</li>
+    <li>Specify a custom context</li>
+</ul>
+
+<br>
+<h3>💡 Helpful Resources</h3>
+<ul>
+    <li> <a href="https://kotlinlang.org/docs/coroutine-context-and-dispatchers.html#jumping-between-threads">Jumping Between Threads</a> </li>
+    <li> <a href="https://developer.android.com/kotlin/coroutines#use-coroutines-for-main-safety">Android and Coroutines for Main Safety</a> </li>
+    <li> <a href="https://developer.android.com/kotlin/coroutines/coroutines-adv#main-safety">Android Coroutines Guide</a> </li>
+</ul>
+
+<br>
+<h3>📝 Instructions</h3>
+<p>Run the code and observe the output</p>
+
+</html>

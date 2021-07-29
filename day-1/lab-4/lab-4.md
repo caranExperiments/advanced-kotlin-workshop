@@ -1,10 +1,8 @@
 # 🖥 Lab 4: Writing Functional Kotlin with Using Arrow
 
 ## Objectives
-1.
-2.
-3.
+1. Complete the exercises in the `Arrow` section of the EduTools course
 
-## Challenges
-1.
-2
+## 💡 Helpful Resources
+- [Arrow.kt Site](https://arrow-kt.io/)
+- [Arrow.kt Core](https://arrow-kt.io/docs/core/)

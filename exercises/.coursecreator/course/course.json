@@ -1,0 +1,1127 @@
+{
+  "summary" : "This is an advanced Kotlin course.\n- This course will be most beneficial to those already familiar with Kotlin\n- It contains hands-on examples of Kotlin code implementation and exercises to practice new skills.\n- The course is based on the author's personal experience in Kotlin development.\n- This course focuses on Kotlin's Contract apis, Arrow.kt, Coroutines, and Flow",
+  "title" : "Advanced Kotlin Workshop Labs",
+  "authors" : [
+    "n8ebel"
+  ],
+  "programming_language" : "kotlin",
+  "language" : "en",
+  "course_type" : "PyCharm",
+  "items" : [
+    {
+      "title" : "welcome",
+      "items" : [
+        {
+          "title" : "getting-started",
+          "task_list" : [
+            {
+              "name" : "tracking-progress",
+              "custom_name" : "Tracking Progress",
+              "files" : {
+                "src/Task.kt" : {
+                  "name" : "src/Task.kt",
+                  "placeholders" : [ ],
+                  "is_visible" : true,
+                  "text" : "// Welcome \uD83D\uDC4B\nfun main() {\n    // nothing to do here in this first task\n}"
+                }
+              },
+              "description_text" : "<html>\n\n<h2>Welcome to this Advanced Kotlin Workshop</h2>\n\n<p>In this first section, you'll learn how to use the EduTools plugin to work through examples and exercises in support\n    of your workshop.</p>\n\n<h3>Tracking Progress</h3>\n\n<p>The EduTools plugin will track your progress as you work through the examples.\n    Each example should have a \"call to action\" button that says something like <b>Run</b> or <b>Check</b>.\n</p>\n\n<p>Clicking this button will validate your code, and will update your progress once you've completed the task.</p>\n\n<p>Some tasks, like this one, may have no code to write. In these cases, simply click <b>Run</b> when you're ready to\n    proceed to the next task.</p>\n</html>",
+              "description_format" : "HTML",
+              "feedback_link" : {
+                "link_type" : "STEPIK"
+              },
+              "task_type" : "theory"
+            },
+            {
+              "name" : "code-tasks",
+              "custom_name" : "Code Tasks",
+              "files" : {
+                "src/Main.kt" : {
+                  "name" : "src/Main.kt",
+                  "placeholders" : [ ],
+                  "is_visible" : true,
+                  "text" : "/**\n * Update/edit Kotlin files to ensure the validations pass\n */\nfun main() {\n    println(\"Validated output goes here\")\n}\n"
+                },
+                "test/output.txt" : {
+                  "name" : "test/output.txt",
+                  "placeholders" : [ ],
+                  "is_visible" : false,
+                  "text" : "Validated output goes here\n"
+                }
+              },
+              "description_text" : "<html>\n\n<h2>Code Tasks</h2>\n\n<p>Each task/example will include a <em>main.kt</em> file.</p>\n\n<p>These files may include <em>TODO()</em> placeholders that hint at updates you should make to the code to make the\nvalidations pass.</p>\n\n<p>In other cases, you may need to simply run the code to observe the output.</p>\n\n<p>In either case, you'll need to click the <b>Check</b> button to save your progress and proceed to the next example.</p>\n\n</html>",
+              "description_format" : "HTML",
+              "feedback_link" : {
+                "link_type" : "STEPIK"
+              },
+              "task_type" : "output"
+            },
+            {
+              "choiceOptions" : [
+                {
+                  "text" : "Hello World",
+                  "status" : "INCORRECT"
+                },
+                {
+                  "text" : "Hello World!",
+                  "status" : "CORRECT"
+                },
+                {
+                  "text" : "Hello Kotlin!",
+                  "status" : "INCORRECT"
+                }
+              ],
+              "isMultipleChoice" : false,
+              "name" : "multiple-choice-tasks",
+              "custom_name" : "Multiple-Choice Tasks",
+              "files" : {
+                "src/Main.kt" : {
+                  "name" : "src/Main.kt",
+                  "placeholders" : [ ],
+                  "is_visible" : true,
+                  "text" : "fun main() {\n    println(\"Hello World!\")\n}\n"
+                }
+              },
+              "description_text" : "<html>\n\n<h2>Multiple-Choice Tasks</h2>\n\n<p>Some tasks may include a multiple-choice question as a progress check.</p>\n\n<p>For these tasks, select the answer you believe is correct then click <b>Check</b> to verify your answer.</p>\n\n<br>\n<h2>Question</h2>\n<p>What will this code print to the console?</p>\n\n</html>",
+              "description_format" : "HTML",
+              "feedback_link" : {
+                "link_type" : "STEPIK"
+              },
+              "task_type" : "choice"
+            },
+            {
+              "name" : "getting-started",
+              "custom_name" : "Getting Started",
+              "files" : {
+                "src/Task.kt" : {
+                  "name" : "src/Task.kt",
+                  "placeholders" : [
+                    {
+                      "offset" : 32,
+                      "length" : 31,
+                      "possible_answer" : "true",
+                      "placeholder_text" : "TODO(\"Are you ready to start?\")"
+                    }
+                  ],
+                  "is_visible" : true,
+                  "text" : "fun isReadyToStart(): Boolean = TODO(\"Are you ready to start?\")"
+                },
+                "test/Tests.kt" : {
+                  "name" : "test/Tests.kt",
+                  "placeholders" : [ ],
+                  "is_visible" : false,
+                  "text" : "import org.junit.Assert\nimport org.junit.Test\n\nclass Test {\n    @Test fun testSolution() {\n        Assert.assertTrue(\"Are you sure you're not ready to start?\", isReadyToStart())\n    }\n}"
+                }
+              },
+              "description_text" : "<html>\n\n<h2>Are you ready to get started?</h2>\n\n<p>Let's try one more exercise before we get started.</p>\n<p>Finish implementing the function to verify that you're ready to start.</p>\n</html>",
+              "description_format" : "HTML",
+              "feedback_link" : {
+                "link_type" : "STEPIK"
+              },
+              "task_type" : "edu"
+            }
+          ],
+          "type" : "lesson"
+        }
+      ],
+      "type" : "section"
+    },
+    {
+      "title" : "contracts",
+      "items" : [
+        {
+          "title" : "improving-smartcasts",
+          "task_list" : [
+            {
+              "name" : "writing-helper-functions",
+              "custom_name" : "Writing Helper Functions 1",
+              "files" : {
+                "src/Main.kt" : {
+                  "name" : "src/Main.kt",
+                  "placeholders" : [ ],
+                  "is_visible" : true,
+                  "text" : "fun Any?.isNull(): Boolean = this == null\n\nfun main() {\n    val name: String? = \"Kotlin\"\n    if (name.isNull()) return\n\n    println(\"name is ${name?.length} characters long\")\n}\n"
+                },
+                "test/output.txt" : {
+                  "name" : "test/output.txt",
+                  "placeholders" : [ ],
+                  "is_visible" : false,
+                  "text" : "name is 6 characters long\n"
+                }
+              },
+              "description_text" : "<html>\n\n<h2>Writing Helper Functions</h2>\n\n<p>Observe the <em>isNull()</em> extension function defined here.</p>\n\n<p>This function attempts to provide a convenient syntax for checking whether a variable/property is <em>null</em> or not</p>\n\n<p>Notice, that we check the value of <em>name.isNull()</em> and return, but still have to perform a null-safe call when accessing <em>name.length</em> after checking <em>isNull()</em>.</p>\n\n<p>The Kotlin compiler doesn't know that our <em>isNull()</em> method returning <em>false</em> infers that our variable is not null, and that the compiler could then smartcast <em>name</em> to a non-null type.</p>\n\n<p>This is one of the major problems Kotlin's Contract apis can help us address</p>\n</html>",
+              "description_format" : "HTML",
+              "feedback_link" : {
+                "link_type" : "STEPIK"
+              },
+              "task_type" : "output"
+            },
+            {
+              "name" : "writing-helper-functions-2",
+              "custom_name" : "Writing Helper Functions 2",
+              "files" : {
+                "src/Main.kt" : {
+                  "name" : "src/Main.kt",
+                  "placeholders" : [ ],
+                  "is_visible" : true,
+                  "text" : "\nfun String?.isNotNullOrBlank() = !isNullOrBlank()\n\nfun main() {\n    val name: String? = null\n    if (name.isNotNullOrBlank()) {\n        println(\"name is ${name?.length} characters long\")\n    }\n}\n"
+                },
+                "test/output.txt" : {
+                  "name" : "test/output.txt",
+                  "placeholders" : [ ],
+                  "is_visible" : false,
+                  "text" : "<no output>"
+                }
+              },
+              "description_text" : "<html>\n\n<h2>Writing Helper Functions 2</h2>\n\n<p>In this example, we've defined another helper function <em>isNotNullOrBlank()</em> by negating the value return from\n    standard library function <em>isNullOrBlank()</em>.</p>\n\n<p>While <em>isNullOrBlank()</em> may helper the compiler infer nullability (thanks to Contracts), the compiler cannot\n    extend those inferences to a function calling into another function that includes a contract.</p>\n\n<p>This highlights the need for helper functions to define their own contracts - rather than relying on the contracts of\n    functions they may use in their implementation.</p>\n\n<h3>Improving Compiler Inferences</h3>\n<p>In the next examples, we'll improve these helper functions by making use of Kotlin's Contract apis.</p>\n<p>By defining a contract, we'll be able to avoid the additional null-safe calls when accessing our <em>name</em>\n    variable after calling our helper functions.</p>\n</html>",
+              "description_format" : "HTML",
+              "feedback_link" : {
+                "link_type" : "STEPIK"
+              },
+              "task_type" : "output"
+            },
+            {
+              "name" : "writing-contracts",
+              "custom_name" : "Writing Contracts 1",
+              "files" : {
+                "src/Main.kt" : {
+                  "name" : "src/Main.kt",
+                  "placeholders" : [ ],
+                  "is_visible" : true,
+                  "text" : "import kotlin.contracts.ExperimentalContracts\nimport kotlin.contracts.contract\n\n@OptIn(ExperimentalContracts::class)\nfun Any?.isNull(): Boolean {\n    contract {\n        returns(false) implies (this@isNull != null)\n    }\n    return this == null\n}\n\nfun main() {\n    val name: String? = \"Kotlin\"\n    if (name.isNull()) return\n\n    println(\"name is ${name.length} characters long\")\n}"
+                },
+                "test/output.txt" : {
+                  "name" : "test/output.txt",
+                  "placeholders" : [ ],
+                  "is_visible" : false,
+                  "text" : "name is 6 characters long\n"
+                }
+              },
+              "description_text" : "<html>\n\n<h2>Writing Contracts 1</h2>\n\n<h4>\uD83D\uDCA1 Helpful Resources</h4>\n<ul>\n    <li> <a href=\"https://kotlinlang.org/docs/whatsnew13.html#contracts\">Kotlin Contracts in Kotlin 1.3</a> </li>\n    <li> <a href=\"https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.contracts/-contract-builder/\">ContractBuilder Reference</a> </li>\n    <li> <a href=\"https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.contracts/-contract-builder/returns.html\">returns() Reference</a> </li>\n    <li> <a href=\"https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.contracts/-simple-effect/\">SimpleEffect (implies()) Reference</a> </li>\n</ul>\n\n<p>In this example, we've returned to our <em>isNull()</em> function, and added our first contract.</p>\n\n<p>There are three items of interest here</p>\n<ul>\n    <li>The <em>contract{}</em> function provides a <em>ContractBuilder</em></li>\n    <li>The <em>returns(false)</em> indicates that the provided implication applies for a given return value\n        <em>false</em></li>\n    <li>The <em>implies(this@isNull != null)</em> call indicates that when <em>isNull()</em> returns <em>false</em>, the\n        compiler may infer that whatever receiver called <em>isNull()</em> is not null.\n    </li>\n</ul>\n\n<p>Notice that after providing the contract, the compiler can now smartcast <em>name</em> after calling\n    <em>isNull()</em> and we no longer need the null-safe call when accessing <em>name.length</em>.</p>\n\n</html>",
+              "description_format" : "HTML",
+              "feedback_link" : {
+                "link_type" : "STEPIK"
+              },
+              "task_type" : "output"
+            },
+            {
+              "name" : "writing-contracts-2",
+              "custom_name" : "Writing Contracts 2",
+              "files" : {
+                "src/Main.kt" : {
+                  "name" : "src/Main.kt",
+                  "placeholders" : [
+                    {
+                      "offset" : 163,
+                      "length" : 51,
+                      "possible_answer" : "contract {\n        returns(true) implies(this@isNotNullOrBlank != null)\n    }\n    return !isNullOrBlank()",
+                      "placeholder_text" : "TODO(\"Implement this method with a valid contract\")"
+                    },
+                    {
+                      "offset" : 326,
+                      "length" : 48,
+                      "possible_answer" : "name.length",
+                      "placeholder_text" : "TODO(\"Use name.length once contract is in place)"
+                    }
+                  ],
+                  "is_visible" : true,
+                  "text" : "import kotlin.contracts.ExperimentalContracts\nimport kotlin.contracts.contract\n\n@OptIn(ExperimentalContracts::class)\nfun String?.isNotNullOrBlank(): Boolean {\n    TODO(\"Implement this method with a valid contract\")\n}\n\nfun main() {\n    val name: String? = \"Kotlin\"\n    if (name.isNotNullOrBlank()) {\n        println(\"name is ${TODO(\"Use name.length once contract is in place)} characters long\")\n    }\n}"
+                },
+                "test/output.txt" : {
+                  "name" : "test/output.txt",
+                  "placeholders" : [ ],
+                  "is_visible" : false,
+                  "text" : "name is 6 characters long\n"
+                }
+              },
+              "description_text" : "<html>\n\n<h2>Writing Contracts 2</h2>\n\n<p>Update the implementation of <em>isNotNullOrBlank()</em> so that it includes a contract that will inform the compiler that a return value of <em>true</em> implies that the receiver is not null.</p>\n\n<p>When done correctly, we should be able to skip using a null-safe call when accessing <em>name.length</em> below.</p>\n\n</html>",
+              "description_format" : "HTML",
+              "feedback_link" : {
+                "link_type" : "STEPIK"
+              },
+              "task_type" : "output"
+            },
+            {
+              "name" : "writing-contracts-3",
+              "custom_name" : "Writing Contracts 3",
+              "files" : {
+                "src/Main.kt" : {
+                  "name" : "src/Main.kt",
+                  "placeholders" : [
+                    {
+                      "offset" : 326,
+                      "length" : 28,
+                      "possible_answer" : "contract {\n        returns() implies(this@requireSuccess is State.Success)\n    }\n    return if(this is State.Success) true else throw IllegalStateException()",
+                      "placeholder_text" : "TODO(\"Implement a contract\")"
+                    },
+                    {
+                      "offset" : 474,
+                      "length" : 51,
+                      "possible_answer" : "state.msg",
+                      "placeholder_text" : "TODO(\"Use state.msg once the contract is in place\")"
+                    }
+                  ],
+                  "is_visible" : true,
+                  "text" : "import java.lang.IllegalStateException\nimport kotlin.contracts.ExperimentalContracts\nimport kotlin.contracts.contract\n\nsealed class State {\n    object Loading: State()\n    data class Success(val msg: String): State()\n    object Error: State()\n}\n\n@OptIn(ExperimentalContracts::class)\nfun State?.requireSuccess(): Boolean {\n    TODO(\"Implement a contract\")\n}\n\nfun main() {\n    val state: State? = State.Success(\"success!\")\n\n    if(!state.requireSuccess()) return\n\n    println(TODO(\"Use state.msg once the contract is in place\"))\n}\n"
+                },
+                "test/output.txt" : {
+                  "name" : "test/output.txt",
+                  "placeholders" : [ ],
+                  "is_visible" : false,
+                  "text" : "success!\n"
+                }
+              },
+              "description_text" : "<html>\n\n<h2>Writing Contracts 3</h2>\n\n<h4>\uD83D\uDCA1 Helpful Resources</h4>\n<ul>\n    <li> <a href=\"https://kotlinlang.org/docs/whatsnew13.html#contracts\">Kotlin Contracts in Kotlin 1.3</a> </li>\n    <li> <a href=\"https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.contracts/-contract-builder/\">ContractBuilder Reference</a> </li>\n    <li> <a href=\"https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.contracts/-contract-builder/returns.html\">returns() Reference</a> </li>\n    <li> <a href=\"https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.contracts/-simple-effect/\">SimpleEffect (implies()) Reference</a> </li>\n</ul>\n\n<p>Implement <em>requireSuccess()</em> using a contract so that successful calls to <em>requireSuccess()</em> will allow\n    the compiler to smartcast <em>state</em> to the type of <em>State.Success</em>.</p>\n\n</html>",
+              "description_format" : "HTML",
+              "feedback_link" : {
+                "link_type" : "STEPIK"
+              },
+              "task_type" : "output"
+            }
+          ],
+          "type" : "lesson"
+        },
+        {
+          "title" : "improving-variable-initialization",
+          "task_list" : [
+            {
+              "name" : "writing-contracts-for-higher-order-functions",
+              "custom_name" : "Writing Contracts for Higher Order Functions",
+              "files" : {
+                "src/Main.kt" : {
+                  "name" : "src/Main.kt",
+                  "placeholders" : [
+                    {
+                      "offset" : 329,
+                      "length" : 64,
+                      "possible_answer" : "contract { callsInPlace(config, InvocationKind.EXACTLY_ONCE) }",
+                      "placeholder_text" : "TODO(\"Provide a contract indicating that config will be called\")"
+                    },
+                    {
+                      "offset" : 542,
+                      "length" : 68,
+                      "possible_answer" : "screenTitle = if(state is State.Success) state.msg else \"\"",
+                      "placeholder_text" : "TODO(\" screenTitle = if(state is State.Success) state.msg else \"\" \")"
+                    },
+                    {
+                      "offset" : 630,
+                      "length" : 21,
+                      "possible_answer" : "screenTitle",
+                      "placeholder_text" : "TODO(\" screenTitle \")"
+                    }
+                  ],
+                  "is_visible" : true,
+                  "text" : "import kotlin.contracts.ExperimentalContracts\nimport kotlin.contracts.InvocationKind\nimport kotlin.contracts.contract\n\nsealed class State {\n    object Loading: State()\n    data class Success(val msg: String): State()\n    object Error: State()\n\n    @OptIn(ExperimentalContracts::class)\n    fun setup(config: () -> Unit) {\n        TODO(\"Provide a contract indicating that config will be called\")\n        config()\n    }\n}\n\nfun main() {\n    val state: State = State.Success(\"Hello Kotlin!\")\n    val screenTitle: String\n\n    state.setup {\n        TODO(\" screenTitle = if(state is State.Success) state.msg else \"\" \")\n    }\n\n    println(TODO(\" screenTitle \"))\n}\n"
+                },
+                "test/output.txt" : {
+                  "name" : "test/output.txt",
+                  "placeholders" : [ ],
+                  "is_visible" : false,
+                  "text" : "Hello Kotlin!\n"
+                }
+              },
+              "description_text" : "<html>\n\n<h2>Writing Contracts for Higher Order Functions</h2>\n\n<p>When working with higher order functions, the compiler can make certain checks/optimizations if it knows that a functional parameter will be called - and how many times it may be called.</p>\n\n<p>In this example, the <em>screenTitle</em> variable cannot be initially assigned within the <em>setup{}</em> block because the compiler cannot ensure that it will be invoked.</p>\n\n<p>By providing a contract within the <em>setup()</em> function, we can tell the compiler that the <em>config</em> function parameter will be executed exactly once.</p>\n\n<p>With that in place, the compiler can then allow the initialization of <em>screenTitle</em>.</p>\n\n<h4>\uD83D\uDCA1 Helpful Resources</h4>\n<ul>\n    <li> <a href=\"https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.contracts/-contract-builder/calls-in-place.html\">callsInPlace() Reference</a> </li>\n    <li> <a href=\"https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.contracts/-invocation-kind/\">InvocationKind Reference</a> </li>\n</ul>\n\n</html>",
+              "description_format" : "HTML",
+              "feedback_link" : {
+                "link_type" : "STEPIK"
+              },
+              "task_type" : "output"
+            }
+          ],
+          "type" : "lesson"
+        }
+      ],
+      "type" : "section"
+    },
+    {
+      "title" : "coroutines",
+      "items" : [
+        {
+          "title" : "getting-started",
+          "task_list" : [
+            {
+              "name" : "example-1",
+              "custom_name" : "Calling a Suspending Function",
+              "files" : {
+                "src/Main.kt" : {
+                  "name" : "src/Main.kt",
+                  "placeholders" : [
+                    {
+                      "offset" : 147,
+                      "length" : 55,
+                      "possible_answer" : "GlobalScope.launch { helloWorld() }",
+                      "placeholder_text" : "TODO(\" Use GlobalScope.launch{} to call helloWorld() \")"
+                    }
+                  ],
+                  "is_visible" : true,
+                  "text" : "import kotlinx.coroutines.GlobalScope\nimport kotlinx.coroutines.launch\n\nsuspend fun helloWorld() {\n    println(\"Hello World!\")\n}\n\nfun main() {\n    TODO(\" Use GlobalScope.launch{} to call helloWorld() \")\n}\n"
+                },
+                "test/output.txt" : {
+                  "name" : "test/output.txt",
+                  "placeholders" : [ ],
+                  "is_visible" : false,
+                  "text" : "<no output>"
+                }
+              },
+              "description_text" : "<html>\n\n<h2>Calling a Suspending Function</h2>\n<p>Suspending functions must be called from a coroutine, or from another suspending function.</p>\n<p>To make a standard <em>helloWorld()</em> function a suspending function, all we need to do is add the <em>suspend</em> modifier.</p>\n\n<br>\n<h3>\uD83D\uDCA1 Helpful Resources</h3>\n<ul>\n    <li> <a href=\"https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-global-scope/\">GlobalScope Documentation</a> </li>\n</ul>\n\n<br>\n<h3>\uD83D\uDCDD Instructions</h3>\n<p>Use <em>GlobalScope.launch{}</em> to call <em>helloWorld()</em></p>\n\n<br>\n<h3>\uD83E\uDD14 Observations</h3>\n<ul>\n    <li> Notice that nothing was printed out to the console </li>\n    <li> Why do you think that might be? </li>\n</ul>\n\n</html>",
+              "description_format" : "HTML",
+              "feedback_link" : {
+                "link_type" : "STEPIK"
+              },
+              "task_type" : "output"
+            },
+            {
+              "name" : "example-2",
+              "custom_name" : "Coroutines Suspend from Calling Thread",
+              "files" : {
+                "src/Main.kt" : {
+                  "name" : "src/Main.kt",
+                  "placeholders" : [
+                    {
+                      "offset" : 187,
+                      "length" : 73,
+                      "possible_answer" : "Thread.sleep(100)",
+                      "placeholder_text" : "TODO(\" Make the calling Thread sleep to give coroutine time to execute \")"
+                    }
+                  ],
+                  "is_visible" : true,
+                  "text" : "import kotlinx.coroutines.GlobalScope\nimport kotlinx.coroutines.launch\n\nsuspend fun helloWorld() {\n    println(\"Hello World!\")\n}\n\nfun main() {\n    GlobalScope.launch { helloWorld() }\n    TODO(\" Make the calling Thread sleep to give coroutine time to execute \")\n}\n"
+                },
+                "test/output.txt" : {
+                  "name" : "test/output.txt",
+                  "placeholders" : [ ],
+                  "is_visible" : false,
+                  "text" : "Hello World!\n"
+                }
+              },
+              "description_text" : "<html>\n\n<h2>Coroutines Suspend from Calling Thread</h2>\n\n<br>\n<h3>\uD83D\uDCA1 Helpful Resources</h3>\n<ul>\n    <li> <a href=\"https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/launch.html\">launch{} Documentation</a> </li>\n    <li> <a href=\"https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-global-scope/\">GlobalScope Documentation</a> </li>\n</ul>\n\n<br>\n<h3>\uD83D\uDCDD Instructions</h3>\n<p>Add a <em>Thread.sleep()</em> call to <em>main()</em> to ensure the coroutine runs and prints the desired output.</p>\n\n<br>\n<h3>\uD83E\uDD14 Observations</h3>\n<ul>\n    <li> What do you think would happen if <em>helloWorld()</em> was a longer running function?</li>\n</ul>\n\n</html>",
+              "description_format" : "HTML",
+              "feedback_link" : {
+                "link_type" : "STEPIK"
+              },
+              "task_type" : "output"
+            },
+            {
+              "name" : "example-3",
+              "custom_name" : "Delaying a Suspending Function",
+              "files" : {
+                "src/Main.kt" : {
+                  "name" : "src/Main.kt",
+                  "placeholders" : [
+                    {
+                      "offset" : 135,
+                      "length" : 27,
+                      "possible_answer" : "delay(1000)",
+                      "placeholder_text" : "TODO(\" Add a delay(1000) \")"
+                    }
+                  ],
+                  "is_visible" : true,
+                  "text" : "import kotlinx.coroutines.GlobalScope\nimport kotlinx.coroutines.delay\nimport kotlinx.coroutines.launch\n\nsuspend fun helloWorld() {\n    TODO(\" Add a delay(1000) \")\n    println(\"Hello World!\")\n}\n\nfun main() {\n    GlobalScope.launch { helloWorld() }\n    Thread.sleep(2000)\n}\n"
+                },
+                "test/output.txt" : {
+                  "name" : "test/output.txt",
+                  "placeholders" : [ ],
+                  "is_visible" : false,
+                  "text" : "Hello World!\n"
+                }
+              },
+              "description_text" : "<html>\n\n<h2>Delaying a Suspending Function</h2>\n<p>We can simulate a long-running function, such as making a network request, by blocking/delaying execution of a suspending function.</p>\n<p>To do this, we can use <em>delay()</em> which acts similarly to <em>Thread.sleep()</em> but for a coroutine.</p>\n<br>\n<h3>\uD83D\uDCA1 Helpful Resources</h3>\n<ul>\n    <li> <a href=\"https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/delay.html\">delay() Reference</a> </li>\n</ul>\n\n<br>\n<h3>\uD83D\uDCDD Instructions</h3>\n<p>Add a call to <em>delay(1000)</em> to the beginning of <em>helloWorld()</em></p>\n\n</html>",
+              "description_format" : "HTML",
+              "feedback_link" : {
+                "link_type" : "STEPIK"
+              },
+              "task_type" : "output"
+            }
+          ],
+          "type" : "lesson"
+        },
+        {
+          "title" : "coroutine-builders",
+          "task_list" : [
+            {
+              "name" : "run-blocking",
+              "custom_name" : "runBlocking{}",
+              "files" : {
+                "src/Main.kt" : {
+                  "name" : "src/Main.kt",
+                  "placeholders" : [
+                    {
+                      "offset" : 182,
+                      "length" : 27,
+                      "possible_answer" : "helloWorld()",
+                      "placeholder_text" : "TODO(\" Call helloWorld() \")"
+                    }
+                  ],
+                  "is_visible" : true,
+                  "text" : "import kotlinx.coroutines.delay\nimport kotlinx.coroutines.runBlocking\n\nsuspend fun helloWorld() {\n    delay(1000)\n    println(\"Hello World!\")\n}\n\nfun main(): Unit = runBlocking {\n    TODO(\" Call helloWorld() \")\n}\n"
+                },
+                "test/output.txt" : {
+                  "name" : "test/output.txt",
+                  "placeholders" : [ ],
+                  "is_visible" : false,
+                  "text" : "Hello Kotlin!\n"
+                }
+              },
+              "description_text" : "<html>\n\n<h2>Bridging Between Non-Coroutine Code Using runBlocking{}</h2>\n<p>In our examples so far, we've had to explicitly block the calling thread to ensure our coroutines complete.</p>\n<p>This isn't ideal though.  What can we do to improve this?</p>\n<br>\n<p>We can introduce the concept of a <em>Coroutine Builder</em> to address this.</p>\n<p>We've already seen one coroutine builder - <em>launch{}</em></p>\n<p>We'll now look at another builder - <em>runBlocking{}</em></p>\n<br>\n<p>The <em>runBlocking{}</em> function runs a new coroutine that blocks the current thread until the coroutine's completion.</p>\n\n<br>\n<h3>\uD83D\uDCA1 Helpful Resources</h3>\n<ul>\n    <li> <a href=\"https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/run-blocking.html\">runBlocking{} Reference</a> </li>\n</ul>\n\n<br>\n<h3>\uD83D\uDCDD Instructions</h3>\n<p>Replace the implementation of <em>main()</em> to use <em>runBlocking{}</em></p> to avoid the explicit call to <em>Thread.sleep()</em>\n\n<br>\n<h3>\uD83E\uDD14 Observations</h3>\n<ul>\n    <li> Notice that now, we don't need any explicit code to sleep/delay our main thread. </li>\n</ul>\n\n</html>",
+              "description_format" : "HTML",
+              "feedback_link" : {
+                "link_type" : "STEPIK"
+              },
+              "task_type" : "output"
+            },
+            {
+              "name" : "coroutine-scope-count-to-n",
+              "custom_name" : "coroutineScope{}",
+              "files" : {
+                "src/Main.kt" : {
+                  "name" : "src/Main.kt",
+                  "placeholders" : [
+                    {
+                      "offset" : 271,
+                      "length" : 49,
+                      "possible_answer" : "for (i in 0..n) {\n        delay(i * 1000L)\n        println(i)\n    }",
+                      "placeholder_text" : "TODO(\" Print values from 0 to N - 1 per second \")"
+                    }
+                  ],
+                  "is_visible" : true,
+                  "text" : "import kotlinx.coroutines.*\n\nfun main() = runBlocking {\n    println(\"Start counting\")\n    countToN(3)\n    println(\"Done counting\")\n}\n\n/**\n * Update [countToN] so it sequentially prints out all numbers from 0 to [n]\n */\nsuspend fun countToN(n: Int) = coroutineScope {\n    TODO(\" Print values from 0 to N - 1 per second \")\n}"
+                },
+                "test/output.txt" : {
+                  "name" : "test/output.txt",
+                  "placeholders" : [ ],
+                  "is_visible" : false,
+                  "text" : "Start counting\n0\n1\n2\n3\nDone counting\n"
+                }
+              },
+              "description_text" : "<html>\n\n<h2>Launch, and Wait, for Multiple Coroutines</h2>\n<p>What if we want to call a suspending function that completes only once all its child coroutines complete?</p>\n<p>To accomplish this, we can turn to another coroutine builder - <em>coroutineScope{}</em></p>\n<br>\n<p>The <em>coroutineScope{}</em> builder returns once it, and all its children complete.</p>\n\n<br>\n<h3>\uD83D\uDCA1 Helpful Resources</h3>\n<ul>\n    <li> <a href=\"https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/coroutine-scope.html\">coroutineScope{} Reference</a> </li>\n</ul>\n\n<br>\n<h3>\uD83D\uDCDD Instructions</h3>\n<p>Within the call to <em>coroutineScope{}</em>, launch one coroutine per second for numbers 0 to N</p>\n\n<br>\n<h3>\uD83E\uDD14 Observations</h3>\n<ul>\n    <li>Notice how <em>countToN()</em> only completes, and <em>main()</em> finishes, once all coroutines are completed.</li>\n</ul>\n\n</html>",
+              "description_format" : "HTML",
+              "feedback_link" : {
+                "link_type" : "STEPIK"
+              },
+              "task_type" : "output"
+            },
+            {
+              "name" : "job-join",
+              "custom_name" : "Suspending Until Job Is Complete",
+              "files" : {
+                "src/Main.kt" : {
+                  "name" : "src/Main.kt",
+                  "placeholders" : [ ],
+                  "is_visible" : true,
+                  "text" : "import kotlinx.coroutines.coroutineScope\nimport kotlinx.coroutines.delay\nimport kotlinx.coroutines.launch\nimport kotlinx.coroutines.runBlocking\n\nfun main() = runBlocking {\n    println(\"Starting to count...\")\n\n    launch {\n        for (i in 0..3) {\n            launch {\n                delay(1000L * i)\n                println(i)\n            }\n        }\n    }\n\n    println(\"Done counting\")\n}\n"
+                },
+                "test/output.txt" : {
+                  "name" : "test/output.txt",
+                  "placeholders" : [ ],
+                  "is_visible" : false,
+                  "text" : "Starting to count...\n0\n1\n2\n3\nDone counting\n"
+                }
+              },
+              "description_text" : "<html>\n\n<h2>Waiting on Jobs</h2>\n<p>How do we suspend execution until all coroutines within a <em>launch{}</em> call complete?</p>\n<p>Calling <em>launch{}</em> returns a <em>Job</em> which can be used to cancel the coroutines or to suspend execution until all coroutines within the <em>Job</em> have completed.</p>\n<p>Calling <em>Job.join()</em> will suspend a coroutine until the <em>Job</em> is completed.</p>\n<br>\n<h3>\uD83D\uDCA1 Helpful Resources</h3>\n<ul>\n    <li> <a href=\"https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-job/index.html\">Job Reference</a> </li>\n    <li> <a href=\"https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-job/join.html\">Job.join() Reference</a> </li>\n    <li> <a href=\"https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/launch.html\">launch{} Reference</a> </li>\n</ul>\n\n<br>\n<h3>\uD83D\uDCDD Instructions</h3>\n<p>Update the implementation of <em>main()</em> so that \"Done counting\" is printed last</p>\n<p>Do so by getting a reference to the <em>Job</em> returned by <em>launch{}</em> and calling <em>Job.join()</em> before \"Done counting\".</p>\n\n<br>\n<h3>\uD83E\uDD14 Observations</h3>\n<ul>\n    <li>Notice that when initially run, \"Done counting\" is printed out immediately, and then the counting beings.</li>\n    <li>Why do you think that is?</li>\n</ul>\n\n</html>",
+              "description_format" : "HTML",
+              "feedback_link" : {
+                "link_type" : "STEPIK"
+              },
+              "task_type" : "output"
+            },
+            {
+              "name" : "async-await",
+              "custom_name" : "Aysnc/Await",
+              "files" : {
+                "src/Main.kt" : {
+                  "name" : "src/Main.kt",
+                  "placeholders" : [ ],
+                  "is_visible" : true,
+                  "text" : "import kotlinx.coroutines.async\nimport kotlinx.coroutines.delay\nimport kotlinx.coroutines.runBlocking\nimport kotlin.system.measureTimeMillis\n\nsuspend fun longRunningTask1(): Int {\n    delay(1000)\n    return 2\n}\n\nsuspend fun longRunningTask2(): Int {\n    delay(1000)\n    return 3\n}\n\n\nfun main() = runBlocking {\n    val time = measureTimeMillis {\n        val one = longRunningTask1()\n        val two = longRunningTask2()\n        println(\"The answer is ${one + two}\")\n    }\n    println(\"Took $time milliseconds\")\n}\n"
+                }
+              },
+              "description_text" : "<html>\n\n<h2>Async/Await</h2>\n<p>We've seen that code within a coroutine is sequential by default - suspending functions will be executed in order within the coroutine.</p>\n<p>But what if we want to run two tasks in parallel?</p>\n<br>\n<p>To run multiple tasks concurrently, we can use the <em>async{}</em> coroutine builder.</p>\n<p><em>async{}</em> aligns with the async/await conventions from languages such as C# and Javascript.</p>\n<p>Calling <em>async{}</em> will return to us a <em>Deferred</em> which we can then use to <em>await()</em> the completion of the suspending task.</p>\n\n<br>\n<h3>\uD83D\uDCA1 Helpful Resources</h3>\n<ul>\n    <li> <a href=\"https://kotlinlang.org/docs/composing-suspending-functions.html#concurrent-using-async\">Current Using Async</a> </li>\n    <li> <a href=\"https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/async.html\">async{} Reference</a> </li>\n    <li> <a href=\"https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/await.html\">await() Reference</a> </li>\n</ul>\n\n<br>\n<h3>\uD83D\uDCDD Instructions</h3>\n<p>Using the <em>async{}</em> coroutine builder, refactor <em>main()</em> to carry out its calculations in parallel</p>\n\n<br>\n<h3>\uD83E\uDD14 Observations</h3>\n<ul>\n    <li>Notice that when initially run, <em>main()</em> takes ~2 seconds to complete.</li>\n    <li>After applying the async/await pattern, <em>main()</em> should take ~1 seconds to complete.</li>\n</ul>\n\n</html>",
+              "description_format" : "HTML",
+              "feedback_link" : {
+                "link_type" : "STEPIK"
+              },
+              "task_type" : "theory"
+            }
+          ],
+          "type" : "lesson"
+        },
+        {
+          "title" : "context-switching",
+          "task_list" : [
+            {
+              "name" : "default-disptachers",
+              "custom_name" : "CoroutineContext and Dispatchers",
+              "files" : {
+                "src/Main.kt" : {
+                  "name" : "src/Main.kt",
+                  "placeholders" : [ ],
+                  "is_visible" : true,
+                  "text" : "import kotlinx.coroutines.Dispatchers\nimport kotlinx.coroutines.launch\nimport kotlinx.coroutines.newSingleThreadContext\nimport kotlinx.coroutines.runBlocking\n\nfun main(): Unit = runBlocking {\n    launch {\n        println(\"launch(){} - thread name = ${Thread.currentThread().name}\")\n    }\n\n    launch(Dispatchers.Default) {\n        println(\"launch(Default){} - thread name = ${Thread.currentThread().name}\")\n    }\n\n    launch(Dispatchers.IO) {\n        println(\"launch(IO){} - thread name = ${Thread.currentThread().name}\")\n    }\n\n    launch(newSingleThreadContext(\"CustomThread\")) {\n        println(\"launch(newSingleThreadContext()){} - thread name = ${Thread.currentThread().name}\")\n    }\n}\n"
+                }
+              },
+              "description_text" : "<html>\n\n<h2>CoroutineContext and Dispatchers</h2>\n<p>Coroutines are executed within a <em>CoroutineContext</em> which is comprised of two key components</p>\n<ol>\n    <li>Job</li>\n    <li>Dispatcher</li>\n</ol>\n<p>We've seen that a <em>Job</em> is a handle to a coroutine and allows us to cancel or wait on a coroutine.</p>\n<p>The <em>Dispatcher</em> determines which thread will be used for execution of the coroutine.</p>\n<p>By passing different dispatchers to our coroutine builders, we can control which threads are used to execute the coroutines.</p>\n\n<br>\n<h3>\uD83D\uDCA1 Helpful Resources</h3>\n<ul>\n    <li> <a href=\"https://kotlinlang.org/docs/coroutine-context-and-dispatchers.html#dispatchers-and-threads\">Dispatchers and Threads</a> </li>\n</ul>\n\n<br>\n<h3>\uD83D\uDCDD Instructions</h3>\n<p>Run the code and observe the output</p>\n\n<br>\n<h3>\uD83E\uDD14 Observations</h3>\n<ul>\n    <li>How do the execution threads differ based on the <em>Dispatcher</em> passed to the <em>launch{}</em> function?</li>\n</ul>\n\n</html>",
+              "description_format" : "HTML",
+              "feedback_link" : {
+                "link_type" : "STEPIK"
+              },
+              "task_type" : "theory"
+            },
+            {
+              "name" : "with-context",
+              "custom_name" : "Changing Contexts",
+              "files" : {
+                "src/Main.kt" : {
+                  "name" : "src/Main.kt",
+                  "placeholders" : [ ],
+                  "is_visible" : true,
+                  "text" : "import kotlinx.coroutines.*\n\nprivate val context = newSingleThreadContext(\"Custom Context\")\n\nsuspend fun updateUI(name: String) = withContext(context) {\n    println(\"updateUI() running on: ${Thread.currentThread().name}\")\n    // do something with value\n}\n\nsuspend fun longRunningTask() = withContext(Dispatchers.IO) {\n    println(\"longRunningTask() running on: ${Thread.currentThread().name}\")\n    delay(2000)\n    updateUI(\"Kotlin\")\n}\n\nfun main(): Unit  = runBlocking(context) {\n    println(\"main() running on: ${Thread.currentThread().name}\")\n    longRunningTask()\n}\n"
+                },
+                "test/output.txt" : {
+                  "name" : "test/output.txt",
+                  "placeholders" : [ ],
+                  "is_visible" : false,
+                  "text" : "main() running on: Custom Context\nlongRunningTask() running on: DefaultDispatcher-worker-1\nupdateUI() running on: Custom Context\n"
+                }
+              },
+              "description_text" : "<html>\n\n<h2>Changing Context</h2>\n<p>What if we want to carry out some operation on a background thread, and then process the result on another thread?</p>\n<p>We can use the <em>withContext()</em> function to move execution of a coroutine onto a new thread of execution by specifying a new coroutine context</p>\n<br>\n<p>To specify the new context, we can use one of several <em>Dispatchers</em></p>\n<ul>\n    <li>Dispatchers.Default</li>\n    <li>Dispatchers.IO</li>\n    <li>Dispatchers.Main (if using Android or other UI framework)</li>\n    <li>Specify a custom context</li>\n</ul>\n\n<br>\n<h3>\uD83D\uDCA1 Helpful Resources</h3>\n<ul>\n    <li> <a href=\"https://kotlinlang.org/docs/coroutine-context-and-dispatchers.html#jumping-between-threads\">Jumping Between Threads</a> </li>\n    <li> <a href=\"https://developer.android.com/kotlin/coroutines#use-coroutines-for-main-safety\">Android and Coroutines for Main Safety</a> </li>\n    <li> <a href=\"https://developer.android.com/kotlin/coroutines/coroutines-adv#main-safety\">Android Coroutines Guide</a> </li>\n</ul>\n\n<br>\n<h3>\uD83D\uDCDD Instructions</h3>\n<p>Run the code and observe the output</p>\n\n</html>",
+              "description_format" : "HTML",
+              "feedback_link" : {
+                "link_type" : "STEPIK"
+              },
+              "task_type" : "output"
+            }
+          ],
+          "type" : "lesson"
+        },
+        {
+          "title" : "cancellation-and-timeout",
+          "task_list" : [
+            {
+              "name" : "cancel-after-duration",
+              "custom_name" : "Cancel Job",
+              "files" : {
+                "src/Main.kt" : {
+                  "name" : "src/Main.kt",
+                  "placeholders" : [
+                    {
+                      "offset" : 258,
+                      "length" : 80,
+                      "possible_answer" : "delay(2500)\n    job.cancel()\n    job.join()",
+                      "placeholder_text" : "TODO(\" Suspend execution until job completes and cancel job after 2.5 seconds \")"
+                    }
+                  ],
+                  "is_visible" : true,
+                  "text" : "import kotlinx.coroutines.coroutineScope\nimport kotlinx.coroutines.delay\nimport kotlinx.coroutines.launch\nimport kotlinx.coroutines.runBlocking\n\nprivate fun main() = runBlocking {\n    println(\"Starting to count...\")\n\n    val job = launch { countToN(5) }\n    TODO(\" Suspend execution until job completes and cancel job after 2.5 seconds \")\n\n    println(\"Done counting\")\n}\n\nprivate suspend fun countToN(n: Int) = coroutineScope {\n    for (i in 0..n) {\n        launch {\n            delay(1000L * i)\n            println(i)\n        }\n    }\n}\n"
+                },
+                "test/output.txt" : {
+                  "name" : "test/output.txt",
+                  "placeholders" : [ ],
+                  "is_visible" : false,
+                  "text" : "Starting to count...\n0\n1\n2\nDone counting\n"
+                }
+              },
+              "description_text" : "<html>\n\n<h2>Cancelling a Job</h2>\n<p>What if we need to cancel a <em>Job</em>?</p>\n\n<br>\n<h3>\uD83D\uDCA1 Helpful Resources</h3>\n<ul>\n    <li> <a href=\"https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-job/cancel.html\">Job.cancel() Reference</a> </li>\n    <li> <a href=\"https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-job/index.html\">Job Reference</a> </li>\n</ul>\n\n<br>\n<h3>\uD83D\uDCDD Instructions</h3>\n<p>Update the function so that only values 0, 1, and 2 are printed out, followed by \"Done counting\"</p>\n\n<br>\n<h3>\uD83E\uDD14 Observations</h3>\n<ul>\n    <li>When initially run, why does \"Done counting\" print before the numbers?</li>\n</ul>\n\n</html>",
+              "description_format" : "HTML",
+              "feedback_link" : {
+                "link_type" : "STEPIK"
+              },
+              "task_type" : "output"
+            },
+            {
+              "name" : "timeout-after-duration",
+              "custom_name" : "Run With Timeout",
+              "files" : {
+                "src/Main.kt" : {
+                  "name" : "src/Main.kt",
+                  "placeholders" : [
+                    {
+                      "offset" : 124,
+                      "length" : 51,
+                      "possible_answer" : "try {\n        withTimeout(2500) { countToN(5) }\n    } catch (error: TimeoutCancellationException) {\n        println(\"Timed out after 2500ms\")\n    }",
+                      "placeholder_text" : "TODO(\" Call countToN(5) with a timeout of 2500ms \")"
+                    }
+                  ],
+                  "is_visible" : true,
+                  "text" : "import kotlinx.coroutines.*\nimport java.util.*\n\nprivate fun main() = runBlocking {\n    println(\"Starting to count...\")\n\n    TODO(\" Call countToN(5) with a timeout of 2500ms \")\n\n    println(\"Done counting\")\n}\n\nprivate suspend fun countToN(n: Int) = coroutineScope {\n    for (i in 0..n) {\n        launch {\n            delay(1000L * i)\n            println(i)\n        }\n    }\n}\n"
+                },
+                "test/output.txt" : {
+                  "name" : "test/output.txt",
+                  "placeholders" : [ ],
+                  "is_visible" : false,
+                  "text" : "Starting to count...\n0\n1\n2\nTimed out after 2500ms\nDone counting\n"
+                }
+              },
+              "description_text" : "<html>\n\n<h2>Run Suspending Code with a Timeout</h2>\n<p>We can use the <em>withTimeout()</em> function to run a coroutine that will automatically throw a <em>TimeoutCancellationException</em> after a specified timeout period.</p>\n\n<br>\n<h3>\uD83D\uDCA1 Helpful Resources</h3>\n<ul>\n    <li> <a href=\"https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/with-timeout.html\">withTimeout{} Reference</a> </li>\n</ul>\n\n<br>\n<h3>\uD83D\uDCDD Instructions</h3>\n<p>Update the function to call <em>countToN(5)</em> with a timeout of 2500ms so that only values 0,1,and 2 are printed out - followed by \"Done counting\"</p>\n\n<br>\n<h3>\uD83E\uDD14 Observations</h3>\n<ul>\n    <li>?</li>\n</ul>\n\n</html>",
+              "description_format" : "HTML",
+              "feedback_link" : {
+                "link_type" : "STEPIK"
+              },
+              "task_type" : "output"
+            }
+          ],
+          "type" : "lesson"
+        },
+        {
+          "title" : "error-handling",
+          "task_list" : [
+            {
+              "name" : "error-1",
+              "custom_name" : "Basic Exception Handling",
+              "files" : {
+                "src/Main.kt" : {
+                  "name" : "src/Main.kt",
+                  "placeholders" : [ ],
+                  "is_visible" : true,
+                  "text" : "import kotlinx.coroutines.coroutineScope\nimport kotlinx.coroutines.launch\nimport kotlinx.coroutines.runBlocking\nimport java.lang.RuntimeException\n\nfun main() = runBlocking {\n    coroutineScope {\n        launch { println(\"1\") }\n        launch { println(\"2\") }\n        throw RuntimeException()\n    }\n\n    println(\"Finished\")\n}\n"
+                },
+                "test/output.txt" : {
+                  "name" : "test/output.txt",
+                  "placeholders" : [ ],
+                  "is_visible" : false,
+                  "text" : "1\n2\nFinished\n"
+                }
+              },
+              "description_text" : "<html>\n\n<h2>Basic Exception Handling</h2>\n<p>Uncaught exceptions will terminate execution of your application.</p>\n<p>Basic principles of catching possible known exceptions apply whether running in, or outside, of a coroutine.</p>\n\n<br>\n<h3>\uD83D\uDCA1 Helpful Resources</h3>\n<ul>\n    <li> <a href=\"https://kotlinlang.org/docs/exception-handling.html\">Exception Handling</a> </li>\n</ul>\n\n<br>\n<h3>\uD83D\uDCDD Instructions</h3>\n<p>Wrap the thrown exception in a try/catch to allow the launched coroutines to complete.</p>\n\n<br>\n<h3>\uD83E\uDD14 Observations</h3>\n<ul>\n    <li>What do you think would happen if an exception was thrown from within one of the <em>launch{}</em> calls?</li>\n</ul>\n</html>",
+              "description_format" : "HTML",
+              "feedback_link" : {
+                "link_type" : "STEPIK"
+              },
+              "task_type" : "output"
+            },
+            {
+              "name" : "error-2",
+              "custom_name" : "SupervisorJobs",
+              "files" : {
+                "src/Main.kt" : {
+                  "name" : "src/Main.kt",
+                  "placeholders" : [
+                    {
+                      "offset" : 325,
+                      "length" : 60,
+                      "possible_answer" : "CoroutineScope(SupervisorJob())",
+                      "placeholder_text" : "TODO(\"Define a custom CoroutineScope using a SupervisorJob\")"
+                    }
+                  ],
+                  "is_visible" : true,
+                  "text" : "import kotlinx.coroutines.*\nimport java.lang.RuntimeException\n\n// Will provide a less noisy error message when an unhandled exception is caught\n// within launch{} calls where this is used\nval handler = CoroutineExceptionHandler { _, exception ->\n    println(\"Caught $exception\")\n}\n\nfun main() = runBlocking {\n    val scope = TODO(\"Define a custom CoroutineScope using a SupervisorJob\")\n\n    val job1 = scope.launch {\n        delay(200)\n        println(1)\n    }\n    val job2 = scope.launch {\n        delay(100)\n        println(2)\n    }\n    val job3 = scope.launch(handler) { throw RuntimeException() }\n    val job4 = scope.launch { println(4) }\n\n    joinAll(job1, job2, job3, job4)\n    println(\"Finished\")\n}\n"
+                },
+                "test/output.txt" : {
+                  "name" : "test/output.txt",
+                  "placeholders" : [ ],
+                  "is_visible" : false,
+                  "text" : "4\nCaught java.lang.RuntimeException\n2\n1\nFinished\n"
+                }
+              },
+              "description_text" : "<html>\n\n<h2>Unhandled Errors Propagate to Parent and Siblings</h2>\n<p>An unhandled exception will propagate up to the parent scope which will then cancel any other child coroutines.</p>\n<p>If running multiple tasks within a given scope, if one failing should not impact the others, this behavior is not ideal.</p>\n<p>How then can we prevent errors from propagating to the parent scope and sibling coroutines?</p>\n<br>\n<p>The first choice is to handle known exceptions using try/catch</p>\n<p>Additionally, we can launch coroutines within a <em>CoroutineScope</em> created using a <em>SupervisorJob</em>.</p>\n<p>A <em>SupervisorJob</em> will not fail, or cancel all children, when a child fails.</p>\n\n<br>\n<h3>\uD83D\uDCA1 Helpful Resources</h3>\n<ul>\n    <li> <a href=\"https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-supervisor-job.html\">SupervisorJob</a> </li>\n</ul>\n\n<br>\n<h3>\uD83D\uDCDD Instructions</h3>\n<p>Create a custom <em>CoroutineScope</em> using a <em>SupervisorJob</em> that prevent the parent scope from failing and preventing the \"Finished\" message being printed to the console.</p>\n\n<br>\n<h3>\uD83E\uDD14 Observations</h3>\n<ul>\n    <li>What happens if we do not use a <em>SupervisorJob</em>?</li>\n</ul>\n</html>",
+              "description_format" : "HTML",
+              "feedback_link" : {
+                "link_type" : "STEPIK"
+              },
+              "task_type" : "output"
+            }
+          ],
+          "type" : "lesson"
+        }
+      ],
+      "type" : "section"
+    },
+    {
+      "title" : "flow",
+      "items" : [
+        {
+          "title" : "getting-started",
+          "task_list" : [
+            {
+              "name" : "hello-flow",
+              "custom_name" : "Hello Flow",
+              "files" : {
+                "src/Main.kt" : {
+                  "name" : "src/Main.kt",
+                  "placeholders" : [
+                    {
+                      "offset" : 306,
+                      "length" : 65,
+                      "possible_answer" : "getProgrammingLanguages().collect { println(it) }",
+                      "placeholder_text" : "TODO(\" Print the items returned from getProgrammingLanguages() \")"
+                    }
+                  ],
+                  "is_visible" : true,
+                  "text" : "import kotlinx.coroutines.flow.Flow\nimport kotlinx.coroutines.flow.asFlow\nimport kotlinx.coroutines.flow.collect\nimport kotlinx.coroutines.runBlocking\n\nsuspend fun getProgrammingLanguages(): Flow<String> {\n    return listOf(\"Kotlin\", \"Java\", \"C++\", \"Dart\", \"Go\").asFlow()\n}\n\nfun main() = runBlocking {\n    TODO(\" Print the items returned from getProgrammingLanguages() \")\n}\n"
+                },
+                "test/output.txt" : {
+                  "name" : "test/output.txt",
+                  "placeholders" : [ ],
+                  "is_visible" : false,
+                  "text" : ""
+                }
+              },
+              "description_text" : "<html>\n\n<h2>Hello Flow</h2>\n<pr>A Flow represents an asynchronous stream of values.</pr>\n\n<pr>Flows may be used to model streams of data where each individual value may be calculated/returned asynchronously.</pr>\n\n<pr>To observe the values from a <em>Flow</em> we must call <em>Flow.collect{}</em> from within a coroutine.</pr>\n\n<br>\n<h3>\uD83D\uDCA1 Helpful Resources</h3>\n<ul>\n    <li><a href=\"https://kotlinlang.org/docs/flow.html#flows\">Flow Reference</a></li>\n</ul>\n\n<br>\n<h3>\uD83D\uDCDD Instructions</h3>\n<p>Collect the <em>Flow</em> returned from <em>getProgrammingLanguages()</em> and print each language to the console.</p>\n\n<br>\n<h3>\uD83E\uDD14 Observations</h3>\n<ul>\n    <li>What might happen if each value needed to be calculated asynchronously?</li>\n</ul>\n</html>",
+              "description_format" : "HTML",
+              "feedback_link" : {
+                "link_type" : "STEPIK"
+              },
+              "task_type" : "output"
+            }
+          ],
+          "type" : "lesson"
+        },
+        {
+          "title" : "flow-builders",
+          "task_list" : [
+            {
+              "name" : "flow-builders-1",
+              "custom_name" : "flow{}",
+              "files" : {
+                "src/Main.kt" : {
+                  "name" : "src/Main.kt",
+                  "placeholders" : [
+                    {
+                      "offset" : 358,
+                      "length" : 6,
+                      "possible_answer" : "flow {\n    languages.forEach {\n        delay(1000)\n        emit(it)\n    }\n}",
+                      "placeholder_text" : "TODO()"
+                    }
+                  ],
+                  "is_visible" : true,
+                  "text" : "import kotlinx.coroutines.delay\nimport kotlinx.coroutines.flow.Flow\nimport kotlinx.coroutines.flow.asFlow\nimport kotlinx.coroutines.flow.collect\nimport kotlinx.coroutines.flow.flow\nimport kotlinx.coroutines.runBlocking\n\nprivate val languages:List<String> = listOf(\"Kotlin\", \"Java\", \"C++\", \"Dart\", \"Go\")\n\nsuspend fun getProgrammingLanguages(): Flow<String> = TODO()\n\nfun main() = runBlocking {\n    getProgrammingLanguages().collect { println(it) }\n}\n"
+                },
+                "test/output.txt" : {
+                  "name" : "test/output.txt",
+                  "placeholders" : [ ],
+                  "is_visible" : false,
+                  "text" : "Kotlin\nJava\nC++\nDart\nGo\n"
+                }
+              },
+              "description_text" : "<html>\n\n<h2>Flow Builders</h2>\n<p>What if we need to build a <em>Flow</em> in which values must be calculated asynchronously?</p>\n<pr>For this, we can use a Flow Builder</pr>\n\n<br>\n<h3>\uD83D\uDCA1 Helpful Resources</h3>\n<ul>\n    <li><a href=\"https://kotlinlang.org/docs/flow.html#flow-builders\">Flow Builders Reference</a></li>\n</ul>\n\n<br>\n<h3>\uD83D\uDCDD Instructions</h3>\n<p>Use the <em>flow{}</em> builder function to generate programming languages with a 1000ms delay between each emission.</p>\n\n<br>\n<h3>\uD83E\uDD14 Observations</h3>\n<ul>\n    <li>What if we don't know how many items we will have up front?</li>\n</ul>\n</html>",
+              "description_format" : "HTML",
+              "feedback_link" : {
+                "link_type" : "STEPIK"
+              },
+              "task_type" : "output"
+            },
+            {
+              "name" : "flow-builders-2",
+              "custom_name" : "flowOf()",
+              "files" : {
+                "src/Main.kt" : {
+                  "name" : "src/Main.kt",
+                  "placeholders" : [
+                    {
+                      "offset" : 245,
+                      "length" : 6,
+                      "possible_answer" : "flowOf(\"Kotlin\", \"Java\", \"C++\", \"Dart\", \"Go\")",
+                      "placeholder_text" : "TODO()"
+                    }
+                  ],
+                  "is_visible" : true,
+                  "text" : "import kotlinx.coroutines.delay\nimport kotlinx.coroutines.flow.*\nimport kotlinx.coroutines.runBlocking\n\n/**\n * Print the following values\n *\n * Kotlin\n * Java\n * C++\n * Dart\n * Go\n *\n */\nsuspend fun getProgrammingLanguages(): Flow<String>\n    = TODO()\n\nfun main() = runBlocking {\n    getProgrammingLanguages().collect { println(it) }\n}\n"
+                },
+                "test/output.txt" : {
+                  "name" : "test/output.txt",
+                  "placeholders" : [ ],
+                  "is_visible" : false,
+                  "text" : "Kotlin\nJava\nC++\nDart\nGo\n"
+                }
+              },
+              "description_text" : "<html>\n\n<h2>Flow Builders</h2>\n<p>What if we need to build a <em>Flow</em> containing a set of known values?</p>\n<pr>For this, we can use <em>flowOf()</em> or <em>Collection.asFlow()</em></pr>\n\n<br>\n<h3>\uD83D\uDCA1 Helpful Resources</h3>\n<ul>\n    <li><a href=\"https://kotlinlang.org/docs/flow.html#flow-builders\">Flow Builders Reference</a></li>\n</ul>\n\n<br>\n<h3>\uD83D\uDCDD Instructions</h3>\n<p>Use the <em>flowOf()</em> builder function to generate programming languages.</p>\n\n<br>\n<h3>\uD83E\uDD14 Observations</h3>\n<ul>\n    <li>What if we don't know how many items we will have up front?</li>\n</ul>\n</html>",
+              "description_format" : "HTML",
+              "feedback_link" : {
+                "link_type" : "STEPIK"
+              },
+              "task_type" : "output"
+            }
+          ],
+          "type" : "lesson"
+        },
+        {
+          "title" : "error-handling",
+          "task_list" : [
+            {
+              "name" : "error-handling-1",
+              "custom_name" : "catch()",
+              "files" : {
+                "src/Main.kt" : {
+                  "name" : "src/Main.kt",
+                  "placeholders" : [ ],
+                  "is_visible" : true,
+                  "text" : "import kotlinx.coroutines.delay\nimport kotlinx.coroutines.flow.*\nimport kotlinx.coroutines.runBlocking\n\nprivate val languages:List<String?> = listOf(\"Kotlin\", \"Java\", null, \"C++\", \"Dart\", \"Go\")\n\nsuspend fun getProgrammingLanguages(): Flow<String> = flow {\n    languages.forEach {\n        if(it == null) throw IllegalStateException()\n        delay(1000)\n        emit(it)\n    }\n}\n\nfun main() = runBlocking {\n    getProgrammingLanguages()\n        .catch { error -> emit(\"\") }\n        .collect { println(it) }\n}\n"
+                }
+              },
+              "description_text" : "<html>\n\n<h2>Catching Errors in a Flow</h2>\n<p>How can we catch, and respond, to errors generated by a Flow?</p>\n<p>One way is to call <em>catch()</em> on a <em>Flow</em></p>\n\n<br>\n<h3>\uD83D\uDCA1 Helpful Resources</h3>\n<ul>\n    <li><a href=\"https://kotlinlang.org/docs/flow.html#exception-transparency\">Exception Transparency Using Catch</a></li>\n</ul>\n\n<br>\n<h3>\uD83D\uDCDD Instructions</h3>\n<p>Use <em>catch()</em> to handle the exception generated by getProgrammingLanguages()</p>\n<p>You should see \"Kotlin\" and \"Java\" printed to the console, but no error.</p>\n\n<br>\n<h3>\uD83E\uDD14 Observations</h3>\n<ul>\n    <li>Notice that once the exception is caught, the Flow terminates.</li>\n    <li>How else might we handle the exception so that the flow might not terminate prematurely?</li>\n</ul>\n</html>",
+              "description_format" : "HTML",
+              "feedback_link" : {
+                "link_type" : "STEPIK"
+              },
+              "task_type" : "theory"
+            },
+            {
+              "name" : "error-handling-2",
+              "custom_name" : "try/catch",
+              "files" : {
+                "src/Main.kt" : {
+                  "name" : "src/Main.kt",
+                  "placeholders" : [ ],
+                  "is_visible" : true,
+                  "text" : "import kotlinx.coroutines.delay\nimport kotlinx.coroutines.flow.*\nimport kotlinx.coroutines.runBlocking\n\nprivate val languages:List<String?> = listOf(\"Kotlin\", \"Java\", null, \"C++\", \"Dart\", \"Go\")\n\nsuspend fun getProgrammingLanguages(): Flow<String> = flow {\n    languages.forEach {\n        if(it == null) return@forEach\n        delay(1000)\n        emit(it)\n    }\n}\n\nfun main() = runBlocking {\n    getProgrammingLanguages().collect { println(it) }\n}\n"
+                }
+              },
+              "description_text" : "<html>\n\n<h2>Catching Errors in a Flow</h2>\n<p>How can we catch, and respond, to errors generated by a Flow?</p>\n<p>We can always respond to possible exceptions by wrapping them in try/catch at the call site to avoid propagate errors throughout our Flow.</p>\n\n<br>\n<h3>\uD83D\uDCA1 Helpful Resources</h3>\n<ul>\n    <li><a href=\"https://kotlinlang.org/docs/flow.html#exception-transparency\">Exception Transparency Using Catch</a></li>\n</ul>\n\n<br>\n<h3>\uD83D\uDCDD Instructions</h3>\n<p>Use a try/catch to avoid throwing an exception when encountering a null value when building the flow</p>\n<p>Alternatively, you could check for null and simply not emit a value.</p>\n\n<br>\n<h3>\uD83E\uDD14 Observations</h3>\n<ul>\n    <li>Notice that once the exception is caught, the Flow terminates.</li>\n    <li>How else might we handle the exception so that the flow might not terminate prematurely?</li>\n</ul>\n</html>",
+              "description_format" : "HTML",
+              "feedback_link" : {
+                "link_type" : "STEPIK"
+              },
+              "task_type" : "theory"
+            }
+          ],
+          "type" : "lesson"
+        },
+        {
+          "title" : "context-switching",
+          "task_list" : [
+            {
+              "name" : "flow-context",
+              "custom_name" : "flowOn()",
+              "files" : {
+                "src/Main.kt" : {
+                  "name" : "src/Main.kt",
+                  "placeholders" : [
+                    {
+                      "offset" : 491,
+                      "length" : 74,
+                      "possible_answer" : ".flowOn(Dispatchers.IO)",
+                      "placeholder_text" : "TODO(\" Use flowOn() to change the context that the flow will execute in\" )"
+                    }
+                  ],
+                  "is_visible" : true,
+                  "text" : "import kotlinx.coroutines.Dispatchers\nimport kotlinx.coroutines.delay\nimport kotlinx.coroutines.flow.*\nimport kotlinx.coroutines.runBlocking\n\nprivate val languages:List<String> = listOf(\"Kotlin\", \"Java\", \"C++\", \"Dart\", \"Go\")\n\nsuspend fun getProgrammingLanguages(): Flow<String> = flow {\n    languages.forEach {\n        println(\"flow $it on thread ${Thread.currentThread().name}\")\n        delay(1000)\n        emit(it)\n    }\n}\n\nfun main() = runBlocking {\n    getProgrammingLanguages()\n        TODO(\" Use flowOn() to change the context that the flow will execute in\" )\n        .collect {\n            println(\"collect $it on thread ${Thread.currentThread().name}\")\n        }\n}\n"
+                }
+              },
+              "description_text" : "<html>\n\n<h2>flowOn()</h2>\n<p>What if we want to change the thread that will be used to calculate values in the Flow?</p>\n<p>We can do this at collection time by calling <em>flowOn()</em> and passing in a <em>CoroutineContext</em></p>\n\n<br>\n<h3>\uD83D\uDCA1 Helpful Resources</h3>\n<ul>\n    <li><a href=\"https://kotlinlang.org/docs/flow.html#flowon-operator\">flowOn() Reference</a></li>\n</ul>\n\n<br>\n<h3>\uD83D\uDCDD Instructions</h3>\n<p>Use <em>flowOn(Dispatchers.IO)</em> to move Flow calculation to a different thread than collection.</p>\n\n<br>\n<h3>\uD83E\uDD14 Observations</h3>\n<ul>\n    <li>When might you want to apply this pattern?</li>\n</ul>\n</html>",
+              "description_format" : "HTML",
+              "feedback_link" : {
+                "link_type" : "STEPIK"
+              },
+              "task_type" : "theory"
+            }
+          ],
+          "type" : "lesson"
+        },
+        {
+          "title" : "transformations",
+          "task_list" : [
+            {
+              "name" : "flow-transformation-1",
+              "custom_name" : "Transforming Flows",
+              "files" : {
+                "src/Main.kt" : {
+                  "name" : "src/Main.kt",
+                  "placeholders" : [ ],
+                  "is_visible" : true,
+                  "text" : "import kotlinx.coroutines.delay\nimport kotlinx.coroutines.flow.*\nimport kotlinx.coroutines.runBlocking\n\nprivate val languages:List<String> = listOf(\n    \"Kotlin\",\n    \"Java\",\n    \"C++\",\n    \"Dart\",\n    \"Javascript\",\n    \"Python\",\n    \"Go\"\n)\n\nsuspend fun getProgrammingLanguages(): Flow<String> = flow {\n    languages.forEach {\n        delay(1000)\n        emit(it)\n    }\n}\n\nfun main(): Unit = runBlocking {\n    getProgrammingLanguages()\n        .filter { name -> name.length >= 4 }\n        .take(3)\n        .collect { println(it) }\n}\n"
+                },
+                "test/output.txt" : {
+                  "name" : "test/output.txt",
+                  "placeholders" : [ ],
+                  "is_visible" : false,
+                  "text" : "Kotlin\nJava\nDart\n"
+                }
+              },
+              "description_text" : "<html>\n\n<h2>Transforming Flows</h2>\n<p>Like we can with Collection types from the Standard Library, we can transform Flows using functions like filter(), map(), take(), etc</p>\n\n<br>\n<h3>\uD83D\uDCA1 Helpful Resources</h3>\n<ul>\n    <li><a href=\"https://kotlinlang.org/docs/flow.html\">Flow Reference</a></li>\n</ul>\n\n<br>\n<h3>\uD83D\uDCDD Instructions</h3>\n<p>Modify collection to only print the first 3 languages whose names are 4 characters or longer</p>\n\n<br>\n<h3>\uD83E\uDD14 Observations</h3>\n<ul>\n    <li>Notice the execution is not instant.  Flow values must still be generated in order, and with whatever length of time is required.</li>\n</ul>\n</html>",
+              "description_format" : "HTML",
+              "feedback_link" : {
+                "link_type" : "STEPIK"
+              },
+              "task_type" : "output"
+            }
+          ],
+          "type" : "lesson"
+        },
+        {
+          "title" : "state-flow",
+          "task_list" : [
+            {
+              "name" : "stateflow-1",
+              "custom_name" : "StateFlow",
+              "files" : {
+                "src/Main.kt" : {
+                  "name" : "src/Main.kt",
+                  "placeholders" : [
+                    {
+                      "offset" : 779,
+                      "length" : 6,
+                      "possible_answer" : "manager.lastLocation.first()",
+                      "placeholder_text" : "TODO()"
+                    },
+                    {
+                      "offset" : 811,
+                      "length" : 6,
+                      "possible_answer" : "manager.lastLocation.first()",
+                      "placeholder_text" : "TODO()"
+                    }
+                  ],
+                  "is_visible" : true,
+                  "text" : "import kotlinx.coroutines.*\nimport kotlinx.coroutines.flow.*\nimport kotlin.random.Random\n\ndata class Location(val lat: Float, val lon: Float)\n\ninterface LocationProvider {\n    val lastLocation: Flow<Location?>\n}\n\nclass LocationManager : LocationProvider {\n\n    private val scope = CoroutineScope(Dispatchers.IO)\n\n    private val _lastLocation: MutableStateFlow<Location?> = MutableStateFlow(null)\n    override val lastLocation: StateFlow<Location?> = _lastLocation\n\n    init {\n        scope.launch {\n            while(true) {\n                delay(1000)\n                    _lastLocation.emit(Location(Random.nextFloat(), Random.nextFloat()))\n            }\n        }\n    }\n}\n\nfun main() = runBlocking {\n    val manager = LocationManager()\n    delay(2000)\n    val firstObserver = TODO()\n    val secondObserver = TODO()\n\n    println(firstObserver == secondObserver)\n}\n"
+                },
+                "test/output.txt" : {
+                  "name" : "test/output.txt",
+                  "placeholders" : [ ],
+                  "is_visible" : false,
+                  "text" : "true\n"
+                }
+              },
+              "description_text" : "<html>\n\n<h2>StateFlow</h2>\n\n<p>A <em>StateFlow</em> will return the last item to new observers.</p>\n\n<br>\n<h3>\uD83D\uDCA1 Helpful Resources</h3>\n<ul>\n    <li><a href=\"https://developer.android.com/kotlin/flow/stateflow-and-sharedflow\">StateFlow and SharedFlow</a></li>\n</ul>\n\n<br>\n<h3>\uD83D\uDCDD Instructions</h3>\n<p>Create 2 Flow observers that get the first item from <em>lastLocation</em></p>\n<p>We will then verify that these are the same value since the 2nd should get whatever the most recent value was which should match the first.</p>\n\n</html>",
+              "description_format" : "HTML",
+              "feedback_link" : {
+                "link_type" : "STEPIK"
+              },
+              "task_type" : "output"
+            }
+          ],
+          "type" : "lesson"
+        },
+        {
+          "title" : "shared-flow",
+          "task_list" : [
+            {
+              "name" : "sharedflow-1",
+              "custom_name" : "SharedFlow",
+              "files" : {
+                "src/Main.kt" : {
+                  "name" : "src/Main.kt",
+                  "placeholders" : [
+                    {
+                      "offset" : 399,
+                      "length" : 49,
+                      "possible_answer" : "override val lastLocation: SharedFlow<Location?> = _lastLocation",
+                      "placeholder_text" : "TODO(\"Define the lastLocation property override\")"
+                    }
+                  ],
+                  "is_visible" : true,
+                  "text" : "import kotlinx.coroutines.*\nimport kotlinx.coroutines.flow.*\nimport kotlin.random.Random\n\ndata class Location(val lat: Float, val lon: Float)\n\ninterface LocationProvider {\n    val lastLocation: Flow<Location?>\n}\n\nclass LocationManager : LocationProvider {\n\n    private val scope = CoroutineScope(Dispatchers.IO)\n\n    private val _lastLocation: MutableSharedFlow<Location?> = MutableSharedFlow()\n    TODO(\"Define the lastLocation property override\")\n\n    init {\n        scope.launch {\n            while(true) {\n                delay(1000)\n                    _lastLocation.emit(Location(Random.nextFloat(), Random.nextFloat()))\n            }\n        }\n    }\n}\n\nfun main() = runBlocking {\n    val manager = LocationManager()\n    delay(2000)\n\n    val task1 = async {\n        delay(1000)\n        manager.lastLocation.take(5).collect { println(\"1) $it\") }\n    }\n\n    val task2 = async {\n        manager.lastLocation.take(5).collect { println(\"2) $it\") }\n    }\n\n    joinAll(task1, task2)\n}\n"
+                }
+              },
+              "description_text" : "<html>\n\n<h2>SharedFlow</h2>\n\n<p>A <em>SharedFlow</em> is a hot Flow that can emit values to multiple observers at the same time.</p>\n\n<br>\n<h3>\uD83D\uDCA1 Helpful Resources</h3>\n<ul>\n    <li><a href=\"https://developer.android.com/kotlin/flow/stateflow-and-sharedflow\">StateFlow and SharedFlow</a></li>\n</ul>\n\n<br>\n<h3>\uD83D\uDCDD Instructions</h3>\n<p>Implement the <em>lastLocation</em> property override, and observe the behavior.</p>\n\n</html>",
+              "description_format" : "HTML",
+              "feedback_link" : {
+                "link_type" : "STEPIK"
+              },
+              "task_type" : "theory"
+            }
+          ],
+          "type" : "lesson"
+        }
+      ],
+      "type" : "section"
+    },
+    {
+      "title" : "arrow",
+      "items" : [
+        {
+          "title" : "functional-types",
+          "task_list" : [
+            {
+              "name" : "either",
+              "files" : {
+                "src/Main.kt" : {
+                  "name" : "src/Main.kt",
+                  "placeholders" : [
+                    {
+                      "offset" : 427,
+                      "length" : 6,
+                      "possible_answer" : "is Either.Left -> println(\"error: ${result.value}\")\n        is Either.Right -> println(\"success: ${result.value}\")",
+                      "placeholder_text" : "TODO()"
+                    }
+                  ],
+                  "is_visible" : true,
+                  "text" : "import arrow.core.Either\nimport kotlinx.coroutines.delay\nimport kotlinx.coroutines.runBlocking\nimport kotlin.random.Random\n\nsuspend fun calculateSomeValue(): Either<String, Int> {\n    delay(1000)\n    return when (val num = Random.nextInt().mod(10)) {\n        in 0..5 -> Either.Right(num)\n        else -> Either.Left(\"Value was too big\")\n    }\n}\n\nfun main() = runBlocking {\n    when(val result = calculateSomeValue()) {\n        TODO()\n    }\n}\n"
+                }
+              },
+              "description_text" : "<html>\n\n<h2>Either</h2>\n\n<p>The <em>Either</em> type helps us explicitly define a data type that represents both the possible <b>success</b> and <b>failure</b> types of an operation.</p>\n<p>Say we make a request, that we know will return a calculated value, or some exception, we can use an <em>Either</em> to explicitly define both of these states.</p>\n\n<br>\n<h3>\uD83D\uDCA1 Helpful Resources</h3>\n<ul>\n    <li> <a href=\"https://arrow-kt.io/docs/apidocs/arrow-core/arrow.core/-either/\">Either Reference</a> </li>\n</ul>\n\n<br>\n<h3>\uD83D\uDCDD Instructions</h3>\n<p>Implement the <em>when</em> statement to handle both Either subtypes</p>\n\n<br>\n<h3>\uD83E\uDD14 Observations</h3>\n<ul>\n    <li>What types of operations might benefit from this pattern in your own code?</li>\n</ul>\n\n</html>",
+              "description_format" : "HTML",
+              "feedback_link" : {
+                "link_type" : "STEPIK"
+              },
+              "task_type" : "theory"
+            },
+            {
+              "name" : "option",
+              "files" : {
+                "src/Main.kt" : {
+                  "name" : "src/Main.kt",
+                  "placeholders" : [
+                    {
+                      "offset" : 429,
+                      "length" : 6,
+                      "possible_answer" : "is None -> println(\"value was too large\")\n        is Some -> println(\"success: ${result.value}\")",
+                      "placeholder_text" : "TODO()"
+                    }
+                  ],
+                  "is_visible" : true,
+                  "text" : "import arrow.core.None\nimport arrow.core.Option\nimport arrow.core.Some\nimport kotlinx.coroutines.delay\nimport kotlinx.coroutines.runBlocking\nimport kotlin.random.Random\n\nsuspend fun calculateSomeValue(): Option<Int> {\n    delay(1000)\n    return when (val num = Random.nextInt().mod(10)) {\n        in 0..5 -> Some(num)\n        else -> None\n    }\n}\n\nfun main() = runBlocking {\n    when(val result = calculateSomeValue()) {\n        TODO()\n    }\n}\n"
+                }
+              },
+              "description_text" : "<html>\n\n<h2>Option</h2>\n\n<p>The <em>Option</em> type helps us explicitly define a data type in which the value may, or may not, exist.  But if it does exist, we know the explicit type.</p>\n<p>Say we make a request, that we know will return a calculated value, or null, we can use an <em>Option</em> to explicitly define the success case, or use None for the null cases</p>\n\n<br>\n<h3>\uD83D\uDCA1 Helpful Resources</h3>\n<ul>\n    <li> <a href=\"https://arrow-kt.io/docs/apidocs/arrow-core/arrow.core/-option/\">Option Reference</a> </li>\n</ul>\n\n<br>\n<h3>\uD83D\uDCDD Instructions</h3>\n<p>Implement the <em>when</em> statement to handle both Option types</p>\n\n<br>\n<h3>\uD83E\uDD14 Observations</h3>\n<ul>\n    <li>What types of operations might benefit from this pattern in your own code?</li>\n</ul>\n\n</html>",
+              "description_format" : "HTML",
+              "feedback_link" : {
+                "link_type" : "STEPIK"
+              },
+              "task_type" : "theory"
+            },
+            {
+              "name" : "validated",
+              "files" : {
+                "src/Main.kt" : {
+                  "name" : "src/Main.kt",
+                  "placeholders" : [ ],
+                  "is_visible" : true,
+                  "text" : "import arrow.core.*\n\nval invalidEmails = listOf(\n    EmailField(\"nowhere.com\"),\n    EmailField(\"nowheretoolong${(0..251).map { \"g\" }}\"), //this fails\n    EmailField(\"getlost@nowhere.com\")\n)\n\nval validEmails = listOf(\n    EmailField(\"kotlin@jetbrains.com\"),\n    EmailField(\"kotlin@kotlin.dev\"),\n)\n\nfun main() {\n    when (val result = Rules(Strategy.ErrorAccumulation, invalidEmails)) {\n        is Either.Left -> println(\"error: ${result.value.all}\")\n        is Either.Right -> println(\"success: ${result.value}\")\n    }\n}\n"
+                },
+                "src/ValidationError.kt" : {
+                  "name" : "src/ValidationError.kt",
+                  "placeholders" : [ ],
+                  "is_visible" : true,
+                  "text" : "import arrow.core.Nel\n\nsealed class ValidationError(val msg: String) {\n    data class DoesNotContain(val value: String) : ValidationError(\"Did not contain $value\")\n    data class TooLong(val value: Int) : ValidationError(\"Exceeded length of $value\")\n    data class NotAnEmail(val reasons: Nel<ValidationError>) : ValidationError(\"Not a valid email\")\n}"
+                },
+                "src/Rules.kt" : {
+                  "name" : "src/Rules.kt",
+                  "placeholders" : [ ],
+                  "is_visible" : true,
+                  "text" : "import arrow.core.*\nimport arrow.core.computations.either\nimport arrow.typeclasses.Semigroup\n\n/**\n * Enumerate our validation strategies\n */\nenum class Strategy {\n    FailFast, ErrorAccumulation\n}\n\nobject Rules {\n\n    private fun EmailField.containsRequired(pattern: String): ValidatedNel<ValidationError, EmailField> {\n        return if (value.contains(pattern, false)) {\n            validNel()\n        } else {\n            ValidationError.DoesNotContain(pattern).invalidNel()\n        }\n    }\n\n\n    private fun EmailField.isShorterThan(maxLength: Int): ValidatedNel<ValidationError, EmailField> {\n        return if (value.length <= maxLength) {\n            validNel()\n        } else {\n            ValidationError.TooLong(maxLength).invalidNel()\n        }\n    }\n\n    private fun EmailField.validateAccumulateErrors(): ValidatedNel<ValidationError, Email> {\n        return containsRequired(\"@\").zip(Semigroup.nonEmptyList(), isShorterThan(250)) { _, _ ->\n            Email(value)\n        }.handleErrorWith {\n            ValidationError.NotAnEmail(it).invalidNel()\n        }\n    }\n\n    private fun EmailField.validateFailFast(): Either<Nel<ValidationError>, Email> {\n        return either.eager {\n            containsRequired(\"@\").bind() // fails fast on first error found\n            isShorterThan(250).bind()\n\n            // if get to here, we convert into the desired output type\n            Email(value)\n        }\n    }\n\n    operator fun invoke(strategy: Strategy, fields: List<EmailField>): Either<Nel<ValidationError>, List<Email>> =\n        when (strategy) {\n            Strategy.FailFast -> {\n                fields.traverseEither { it.validateFailFast() }\n            }\n            Strategy.ErrorAccumulation -> {\n                fields.traverseValidated(Semigroup.nonEmptyList()) {\n                    it.validateAccumulateErrors()\n                }.toEither()\n            }\n        }\n}"
+                },
+                "src/Email.kt" : {
+                  "name" : "src/Email.kt",
+                  "placeholders" : [ ],
+                  "is_visible" : true,
+                  "text" : "/**\n * Represents the fully validated type that passes all our validation checks\n */\ndata class Email(val value: String)"
+                },
+                "src/EmailField.kt" : {
+                  "name" : "src/EmailField.kt",
+                  "placeholders" : [ ],
+                  "is_visible" : true,
+                  "text" : "/**\n * Represents some incoming form data that a user may have entered\n */\ndata class EmailField(val value: String)"
+                }
+              },
+              "description_text" : "<html>\n\n<h2>Validated</h2>\n\n<p>Similarly to <em>Either</em>, <em>Validated</em> lets us define a success type, or any errors.</p>\n<p>However, whereas <em>Either</em> represents a single error, <em>Validated</em> can allow us to accumulate multiple errors - say if we are validating user input in a form.</p>\n\n<br>\n<h3>\uD83D\uDCA1 Helpful Resources</h3>\n<ul>\n    <li> <a href=\"https://arrow-kt.io/docs/apidocs/arrow-core/arrow.core/-validated/\">Validated Reference</a> </li>\n    <li> <a href=\"https://arrow-kt.io/docs/patterns/error_handling/#alternative-validation-strategies--failing-fast-vs-accumulating-errors\">Failing Fast vs Accumulating Errors</a> </li>\n    <li> <a href=\"https://arrow-kt.io/docs/arrow/core/nonemptylist/\">NonEmptyList (NEL)</a> </li>\n</ul>\n\n<br>\n<h3>\uD83D\uDCDD Instructions</h3>\n<p>Observe the output of the code with both the <em>validEmails</em> and <em>invalidEmails</em> lists.</p>\n\n<br>\n<h3>\uD83E\uDD14 Observations</h3>\n<ul>\n    <li>What questions or ideas does this example prompt?</li>\n    <li>Are there patterns from this code that you could apply to your own projects whether using Arrow.kt or not?</li>\n</ul>\n\n</html>",
+              "description_format" : "HTML",
+              "feedback_link" : {
+                "link_type" : "STEPIK"
+              },
+              "task_type" : "theory"
+            }
+          ],
+          "type" : "lesson"
+        }
+      ],
+      "type" : "section"
+    }
+  ],
+  "additional_files" : [
+    {
+      "name" : "build.gradle",
+      "placeholders" : [ ],
+      "is_visible" : true,
+      "text" : "buildscript {\n    ext.kotlin_version = '1.5.10'\n\n    repositories {\n        mavenCentral()\n        \n    }\n\n    dependencies {\n        classpath \"org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version\"\n    }\n}\n\ndef printOutput(def output) {\n    return tasks.create(\"printOutput\") {\n        println \"#educational_plugin_checker_version 1\"\n        def separator = System.lineSeparator()\n        def lines = output.toString().split(\"(?<=${separator})|(?=${separator})\")\n        for (line in lines) {\n            println \"#educational_plugin\" + line\n        }\n    }\n}\n\nsubprojects {\n    apply plugin: 'application'\n    apply plugin: 'java'\n    apply plugin: 'kotlin'\n\n    sourceCompatibility = 1.8\n\n    repositories {\n        mavenCentral()\n        \n    }\n\n    dependencies {\n\n        implementation(\"org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.1\")\n        testImplementation(\"org.jetbrains.kotlinx:kotlinx-coroutines-test:1.5.1\")\n\n        implementation \"io.arrow-kt:arrow-core:0.13.2\"\n\n        testImplementation group: 'junit', name: 'junit', version: '4.12'\n    }\n\n    compileKotlin.destinationDir = compileJava.destinationDir\n\n    compileKotlin {\n        kotlinOptions.jvmTarget = \"1.8\"\n    }\n    compileTestKotlin {\n        kotlinOptions.jvmTarget = \"1.8\"\n    }\n\n    sourceSets {\n        main {\n            kotlin.srcDir 'src'\n            java.srcDir 'src'\n        }\n        test {\n            kotlin.srcDir 'test'\n            java.srcDir 'test'\n        }\n    }\n\n    mainClassName = project.hasProperty(\"mainClass\") ? project.getProperty(\"mainClass\") : \"\"\n    test {\n        outputs.upToDateWhen { false }\n        afterTest { TestDescriptor test, TestResult result ->\n            if (result.resultType == TestResult.ResultType.FAILURE) {\n                def message = result.exception?.message ?: \"Wrong answer\"\n                def lines = message.readLines()\n                println \"#educational_plugin FAILED + \" + lines[0]\n                lines.subList(1, lines.size()).forEach { line ->\n                    println \"#educational_plugin\" + line\n                }\n                // we need this to separate output of different tests\n                println()\n            }\n        }\n    }\n\n    if (project.hasProperty(\"educationalRun\") && \"true\".equalsIgnoreCase(project.getProperty(\"educationalRun\"))) {\n        def runOutput = new ByteArrayOutputStream()\n        tasks.run.setStandardOutput(runOutput)\n        tasks.run.doLast { printOutput(runOutput) }\n    }\n}\n\nproject(':util') {\n    dependencies {\n        implementation group: 'junit', name: 'junit', version: '4.12'\n    }\n}\n\nconfigure(subprojects.findAll { it.name != 'util' }) {\n    dependencies {\n        implementation project(':util').sourceSets.main.output\n        testImplementation project(':util').sourceSets.test.output\n    }\n}\n"
+    }
+  ],
+  "version" : 11
+}

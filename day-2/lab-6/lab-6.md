@@ -13,7 +13,7 @@
    1. Go to Run Configurations -> VM Options and add `-Dio.ktor.development=true`
    2. Update `embeddedServer()` config to include `watchPaths = listOf("classes")`
 3. Deploy the project in continuous development mode and observe auto reload of changes after rebuild
-4. Configure status pages for `NotFound` and `Unauthorized` status
+4. Configure status pages for `NotFound` and `Forbidden` status
 5. Configure basic name/password authentication
 6. Configure DefaultHeaders
 7. Configure CallLogging

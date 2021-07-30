@@ -9,6 +9,14 @@
 6. Build and deploy Android app consuming the shared code
 7. Build and deploy the iOS app from Xcode consuming the shared code
 
+## Hints
+Test/Verification Gradle Tasks
+`./gradlew check`
+`./gradlew test`
+
+To Build The Shared Framework
+`./gradlew build`
+
 ## 💡 Helpful Resources
 - [Mulitplatform Mobile Landing Page](https://kotlinlang.org/lp/mobile/)
 - [Getting Started with Kotlin Multiplatform Mobile](https://kotlinlang.org/docs/mobile/getting-started.html)

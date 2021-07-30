@@ -6,13 +6,6 @@
 3. Run the executable from the command line to deploy your server locally
 4. Use curl or the browser to verify your service is working
 
-setup heroku cli
-setup Procfile
-setup app.json
-heroku create myprojectname
-heroku git:remote -a goobar-ktor-sample
-git push heroku main
-
 ## Hints
 `curl http://0.0.0.0:8080`
 `curl http://0.0.0.0:8080/joke`
@@ -22,8 +15,9 @@ git push heroku main
 Deploy your application to Heroku
 
 1. Setup Heroku CLI on your machine
-2. Add `Procfile` with `web: ./build/install/<project name>/bin/<project name>
-3. Add `app.json` with the following info
+2. Assign `embeddedServer` port from env variable if exists `val port = System.getenv("PORT").toIntOrNull() ?: 8080`
+3. Add `Procfile` with `web: ./build/install/<project name>/bin/<project name>
+4. Add `app.json` with the following info
 ```json
 {
   "name": "Hello Ktor World!",

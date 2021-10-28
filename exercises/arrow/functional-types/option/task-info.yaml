@@ -1,8 +1,0 @@
-type: theory
-files:
-- name: src/Main.kt
-  visible: true
-  placeholders:
-  - offset: 429
-    length: 96
-    placeholder_text: TODO()

@@ -1,0 +1,11 @@
+type: theory
+files:
+- name: src/Main.kt
+  visible: true
+  placeholders:
+  - offset: 446
+    length: 35
+    placeholder_text: TODO("print the value")
+  - offset: 507
+    length: 33
+    placeholder_text: TODO("print the error")

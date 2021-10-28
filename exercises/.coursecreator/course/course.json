@@ -17,14 +17,7 @@
             {
               "name" : "tracking-progress",
               "custom_name" : "Tracking Progress",
-              "files" : {
-                "src/Task.kt" : {
-                  "name" : "src/Task.kt",
-                  "placeholders" : [ ],
-                  "is_visible" : true,
-                  "text" : "// Welcome \uD83D\uDC4B\nfun main() {\n    // nothing to do here in this first task\n}"
-                }
-              },
+              "files" : { },
               "description_text" : "<html>\n\n<h2>Welcome to this Advanced Kotlin Workshop</h2>\n\n<p>In this first section, you'll learn how to use the EduTools plugin to work through examples and exercises in support\n    of your workshop.</p>\n\n<h3>Tracking Progress</h3>\n\n<p>The EduTools plugin will track your progress as you work through the examples.\n    Each example should have a \"call to action\" button that says something like <b>Run</b> or <b>Check</b>.\n</p>\n\n<p>Clicking this button will validate your code, and will update your progress once you've completed the task.</p>\n\n<p>Some tasks, like this one, may have no code to write. In these cases, simply click <b>Run</b> when you're ready to\n    proceed to the next task.</p>\n</html>",
               "description_format" : "HTML",
               "feedback_link" : {
@@ -35,20 +28,7 @@
             {
               "name" : "code-tasks",
               "custom_name" : "Code Tasks",
-              "files" : {
-                "src/Main.kt" : {
-                  "name" : "src/Main.kt",
-                  "placeholders" : [ ],
-                  "is_visible" : true,
-                  "text" : "/**\n * Update/edit Kotlin files to ensure the validations pass\n */\nfun main() {\n    println(\"Validated output goes here\")\n}\n"
-                },
-                "test/output.txt" : {
-                  "name" : "test/output.txt",
-                  "placeholders" : [ ],
-                  "is_visible" : false,
-                  "text" : "Validated output goes here\n"
-                }
-              },
+              "files" : { },
               "description_text" : "<html>\n\n<h2>Code Tasks</h2>\n\n<p>Each task/example will include a <em>main.kt</em> file.</p>\n\n<p>These files may include <em>TODO()</em> placeholders that hint at updates you should make to the code to make the\nvalidations pass.</p>\n\n<p>In other cases, you may need to simply run the code to observe the output.</p>\n\n<p>In either case, you'll need to click the <b>Check</b> button to save your progress and proceed to the next example.</p>\n\n</html>",
               "description_format" : "HTML",
               "feedback_link" : {
@@ -74,14 +54,7 @@
               "isMultipleChoice" : false,
               "name" : "multiple-choice-tasks",
               "custom_name" : "Multiple-Choice Tasks",
-              "files" : {
-                "src/Main.kt" : {
-                  "name" : "src/Main.kt",
-                  "placeholders" : [ ],
-                  "is_visible" : true,
-                  "text" : "fun main() {\n    println(\"Hello World!\")\n}\n"
-                }
-              },
+              "files" : { },
               "description_text" : "<html>\n\n<h2>Multiple-Choice Tasks</h2>\n\n<p>Some tasks may include a multiple-choice question as a progress check.</p>\n\n<p>For these tasks, select the answer you believe is correct then click <b>Check</b> to verify your answer.</p>\n\n<br>\n<h2>Question</h2>\n<p>What will this code print to the console?</p>\n\n</html>",
               "description_format" : "HTML",
               "feedback_link" : {
@@ -92,27 +65,7 @@
             {
               "name" : "getting-started",
               "custom_name" : "Getting Started",
-              "files" : {
-                "src/Task.kt" : {
-                  "name" : "src/Task.kt",
-                  "placeholders" : [
-                    {
-                      "offset" : 32,
-                      "length" : 31,
-                      "possible_answer" : "true",
-                      "placeholder_text" : "TODO(\"Are you ready to start?\")"
-                    }
-                  ],
-                  "is_visible" : true,
-                  "text" : "fun isReadyToStart(): Boolean = TODO(\"Are you ready to start?\")"
-                },
-                "test/Tests.kt" : {
-                  "name" : "test/Tests.kt",
-                  "placeholders" : [ ],
-                  "is_visible" : false,
-                  "text" : "import org.junit.Assert\nimport org.junit.Test\n\nclass Test {\n    @Test fun testSolution() {\n        Assert.assertTrue(\"Are you sure you're not ready to start?\", isReadyToStart())\n    }\n}"
-                }
-              },
+              "files" : { },
               "description_text" : "<html>\n\n<h2>Are you ready to get started?</h2>\n\n<p>Let's try one more exercise before we get started.</p>\n<p>Finish implementing the function to verify that you're ready to start.</p>\n</html>",
               "description_format" : "HTML",
               "feedback_link" : {
@@ -326,6 +279,137 @@
                 "link_type" : "STEPIK"
               },
               "task_type" : "output"
+            }
+          ],
+          "type" : "lesson"
+        }
+      ],
+      "type" : "section"
+    },
+    {
+      "title" : "functional",
+      "items" : [
+        {
+          "title" : "functional-types",
+          "task_list" : [
+            {
+              "name" : "either",
+              "files" : {
+                "src/Main.kt" : {
+                  "name" : "src/Main.kt",
+                  "placeholders" : [
+                    {
+                      "offset" : 427,
+                      "length" : 6,
+                      "possible_answer" : "is Either.Left -> println(\"error: ${result.value}\")\n        is Either.Right -> println(\"success: ${result.value}\")",
+                      "placeholder_text" : "TODO()"
+                    }
+                  ],
+                  "is_visible" : true,
+                  "text" : "import arrow.core.Either\nimport kotlinx.coroutines.delay\nimport kotlinx.coroutines.runBlocking\nimport kotlin.random.Random\n\nsuspend fun calculateSomeValue(): Either<String, Int> {\n    delay(1000)\n    return when (val num = Random.nextInt().mod(10)) {\n        in 0..5 -> Either.Right(num)\n        else -> Either.Left(\"Value was too big\")\n    }\n}\n\nfun main() = runBlocking {\n    when(val result = calculateSomeValue()) {\n        TODO()\n    }\n}\n"
+                }
+              },
+              "description_text" : "<html>\n\n<h2>Either</h2>\n\n<p>The <em>Either</em> type helps us explicitly define a data type that represents both the possible <b>success</b> and <b>failure</b> types of an operation.</p>\n<p>Say we make a request, that we know will return a calculated value, or some exception, we can use an <em>Either</em> to explicitly define both of these states.</p>\n\n<br>\n<h3>\uD83D\uDCA1 Helpful Resources</h3>\n<ul>\n    <li> <a href=\"https://arrow-kt.io/docs/apidocs/arrow-core/arrow.core/-either/\">Either Reference</a> </li>\n</ul>\n\n<br>\n<h3>\uD83D\uDCDD Instructions</h3>\n<p>Implement the <em>when</em> statement to handle both Either subtypes</p>\n\n<br>\n<h3>\uD83E\uDD14 Observations</h3>\n<ul>\n    <li>What types of operations might benefit from this pattern in your own code?</li>\n</ul>\n\n</html>",
+              "description_format" : "HTML",
+              "feedback_link" : {
+                "link_type" : "STEPIK"
+              },
+              "task_type" : "theory"
+            },
+            {
+              "name" : "option",
+              "files" : {
+                "src/Main.kt" : {
+                  "name" : "src/Main.kt",
+                  "placeholders" : [
+                    {
+                      "offset" : 429,
+                      "length" : 6,
+                      "possible_answer" : "is None -> println(\"value was too large\")\n        is Some -> println(\"success: ${result.value}\")",
+                      "placeholder_text" : "TODO()"
+                    }
+                  ],
+                  "is_visible" : true,
+                  "text" : "import arrow.core.None\nimport arrow.core.Option\nimport arrow.core.Some\nimport kotlinx.coroutines.delay\nimport kotlinx.coroutines.runBlocking\nimport kotlin.random.Random\n\nsuspend fun calculateSomeValue(): Option<Int> {\n    delay(1000)\n    return when (val num = Random.nextInt().mod(10)) {\n        in 0..5 -> Some(num)\n        else -> None\n    }\n}\n\nfun main() = runBlocking {\n    when(val result = calculateSomeValue()) {\n        TODO()\n    }\n}\n"
+                }
+              },
+              "description_text" : "<html>\n\n<h2>Option</h2>\n\n<p>The <em>Option</em> type helps us explicitly define a data type in which the value may, or may not, exist.  But if it does exist, we know the explicit type.</p>\n<p>Say we make a request, that we know will return a calculated value, or null, we can use an <em>Option</em> to explicitly define the success case, or use None for the null cases</p>\n\n<br>\n<h3>\uD83D\uDCA1 Helpful Resources</h3>\n<ul>\n    <li> <a href=\"https://arrow-kt.io/docs/apidocs/arrow-core/arrow.core/-option/\">Option Reference</a> </li>\n</ul>\n\n<br>\n<h3>\uD83D\uDCDD Instructions</h3>\n<p>Implement the <em>when</em> statement to handle both Option types</p>\n\n<br>\n<h3>\uD83E\uDD14 Observations</h3>\n<ul>\n    <li>What types of operations might benefit from this pattern in your own code?</li>\n</ul>\n\n</html>",
+              "description_format" : "HTML",
+              "feedback_link" : {
+                "link_type" : "STEPIK"
+              },
+              "task_type" : "theory"
+            },
+            {
+              "name" : "validated",
+              "files" : {
+                "src/Main.kt" : {
+                  "name" : "src/Main.kt",
+                  "placeholders" : [ ],
+                  "is_visible" : true,
+                  "text" : "import arrow.core.*\n\nval invalidEmails = listOf(\n    EmailField(\"nowhere.com\"),\n    EmailField(\"nowheretoolong${(0..251).map { \"g\" }}\"), //this fails\n    EmailField(\"getlost@nowhere.com\")\n)\n\nval validEmails = listOf(\n    EmailField(\"kotlin@jetbrains.com\"),\n    EmailField(\"kotlin@kotlin.dev\"),\n)\n\nfun main() {\n    when (val result = Rules(Strategy.ErrorAccumulation, invalidEmails)) {\n        is Either.Left -> println(\"error: ${result.value.all}\")\n        is Either.Right -> println(\"success: ${result.value}\")\n    }\n}\n"
+                },
+                "src/ValidationError.kt" : {
+                  "name" : "src/ValidationError.kt",
+                  "placeholders" : [ ],
+                  "is_visible" : true,
+                  "text" : "import arrow.core.Nel\n\nsealed class ValidationError(val msg: String) {\n    data class DoesNotContain(val value: String) : ValidationError(\"Did not contain $value\")\n    data class TooLong(val value: Int) : ValidationError(\"Exceeded length of $value\")\n    data class NotAnEmail(val reasons: Nel<ValidationError>) : ValidationError(\"Not a valid email\")\n}"
+                },
+                "src/Rules.kt" : {
+                  "name" : "src/Rules.kt",
+                  "placeholders" : [ ],
+                  "is_visible" : true,
+                  "text" : "import arrow.core.*\nimport arrow.core.computations.either\nimport arrow.typeclasses.Semigroup\n\n/**\n * Enumerate our validation strategies\n */\nenum class Strategy {\n    FailFast, ErrorAccumulation\n}\n\nobject Rules {\n\n    private fun EmailField.containsRequired(pattern: String): ValidatedNel<ValidationError, EmailField> {\n        return if (value.contains(pattern, false)) {\n            validNel()\n        } else {\n            ValidationError.DoesNotContain(pattern).invalidNel()\n        }\n    }\n\n\n    private fun EmailField.isShorterThan(maxLength: Int): ValidatedNel<ValidationError, EmailField> {\n        return if (value.length <= maxLength) {\n            validNel()\n        } else {\n            ValidationError.TooLong(maxLength).invalidNel()\n        }\n    }\n\n    private fun EmailField.validateAccumulateErrors(): ValidatedNel<ValidationError, Email> {\n        return containsRequired(\"@\").zip(Semigroup.nonEmptyList(), isShorterThan(250)) { _, _ ->\n            Email(value)\n        }.handleErrorWith {\n            ValidationError.NotAnEmail(it).invalidNel()\n        }\n    }\n\n    private fun EmailField.validateFailFast(): Either<Nel<ValidationError>, Email> {\n        return either.eager {\n            containsRequired(\"@\").bind() // fails fast on first error found\n            isShorterThan(250).bind()\n\n            // if get to here, we convert into the desired output type\n            Email(value)\n        }\n    }\n\n    operator fun invoke(strategy: Strategy, fields: List<EmailField>): Either<Nel<ValidationError>, List<Email>> =\n        when (strategy) {\n            Strategy.FailFast -> {\n                fields.traverseEither { it.validateFailFast() }\n            }\n            Strategy.ErrorAccumulation -> {\n                fields.traverseValidated(Semigroup.nonEmptyList()) {\n                    it.validateAccumulateErrors()\n                }.toEither()\n            }\n        }\n}"
+                },
+                "src/Email.kt" : {
+                  "name" : "src/Email.kt",
+                  "placeholders" : [ ],
+                  "is_visible" : true,
+                  "text" : "/**\n * Represents the fully validated type that passes all our validation checks\n */\ndata class Email(val value: String)"
+                },
+                "src/EmailField.kt" : {
+                  "name" : "src/EmailField.kt",
+                  "placeholders" : [ ],
+                  "is_visible" : true,
+                  "text" : "/**\n * Represents some incoming form data that a user may have entered\n */\ndata class EmailField(val value: String)"
+                }
+              },
+              "description_text" : "<html>\n\n<h2>Validated</h2>\n\n<p>Similarly to <em>Either</em>, <em>Validated</em> lets us define a success type, or any errors.</p>\n<p>However, whereas <em>Either</em> represents a single error, <em>Validated</em> can allow us to accumulate multiple errors - say if we are validating user input in a form.</p>\n\n<br>\n<h3>\uD83D\uDCA1 Helpful Resources</h3>\n<ul>\n    <li> <a href=\"https://arrow-kt.io/docs/apidocs/arrow-core/arrow.core/-validated/\">Validated Reference</a> </li>\n    <li> <a href=\"https://arrow-kt.io/docs/patterns/error_handling/#alternative-validation-strategies--failing-fast-vs-accumulating-errors\">Failing Fast vs Accumulating Errors</a> </li>\n    <li> <a href=\"https://arrow-kt.io/docs/arrow/core/nonemptylist/\">NonEmptyList (NEL)</a> </li>\n</ul>\n\n<br>\n<h3>\uD83D\uDCDD Instructions</h3>\n<p>Observe the output of the code with both the <em>validEmails</em> and <em>invalidEmails</em> lists.</p>\n\n<br>\n<h3>\uD83E\uDD14 Observations</h3>\n<ul>\n    <li>What questions or ideas does this example prompt?</li>\n    <li>Are there patterns from this code that you could apply to your own projects whether using Arrow.kt or not?</li>\n</ul>\n\n</html>",
+              "description_format" : "HTML",
+              "feedback_link" : {
+                "link_type" : "STEPIK"
+              },
+              "task_type" : "theory"
+            },
+            {
+              "name" : "result",
+              "files" : {
+                "src/Main.kt" : {
+                  "name" : "src/Main.kt",
+                  "placeholders" : [
+                    {
+                      "offset" : 446,
+                      "length" : 23,
+                      "possible_answer" : "value -> println(\"success: $value\")",
+                      "placeholder_text" : "TODO(\"print the value\")"
+                    },
+                    {
+                      "offset" : 495,
+                      "length" : 23,
+                      "possible_answer" : "error -> println(\"error: $error\")",
+                      "placeholder_text" : "TODO(\"print the error\")"
+                    }
+                  ],
+                  "is_visible" : true,
+                  "text" : "import arrow.core.Either\nimport kotlinx.coroutines.delay\nimport kotlinx.coroutines.runBlocking\nimport kotlin.random.Random\n\nsuspend fun calculateSomeValue(): Result<Int> {\n    delay(1000)\n    return when (val num = Random.nextInt().mod(10)) {\n        in 0..5 -> Result.success(num)\n        else -> Result.failure(IllegalStateException(\"Value was too big\"))\n    }\n}\n\nfun main() = runBlocking {\n    calculateSomeValue().fold(\n        onSuccess = { TODO(\"print the value\") },\n        onFailure = { TODO(\"print the error\") }\n    )\n}\n"
+                }
+              },
+              "description_text" : "<html>\n\n<h2>Result</h2>\n\n<p>The <em>Result</em> type comes from the Kotlin Standard Library and represents a return value that will either be some single value or an error.</p>\n\n<br>\n<h3>\uD83D\uDCA1 Helpful Resources</h3>\n<ul>\n    <li> <a href=\"https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-result/\">Result Reference</a> </li>\n</ul>\n\n<br>\n<h3>\uD83D\uDCDD Instructions</h3>\n<p>Implement the <em>fold</em> method to handle both Result cases</p>\n\n<br>\n<h3>\uD83E\uDD14 Observations</h3>\n<ul>\n    <li>What types of operations might benefit from this pattern in your own code?</li>\n</ul>\n\n</html>",
+              "description_format" : "HTML",
+              "feedback_link" : {
+                "link_type" : "STEPIK"
+              },
+              "task_type" : "theory"
             }
           ],
           "type" : "lesson"
@@ -1012,110 +1096,45 @@
         }
       ],
       "type" : "section"
-    },
-    {
-      "title" : "arrow",
-      "items" : [
-        {
-          "title" : "functional-types",
-          "task_list" : [
-            {
-              "name" : "either",
-              "files" : {
-                "src/Main.kt" : {
-                  "name" : "src/Main.kt",
-                  "placeholders" : [
-                    {
-                      "offset" : 427,
-                      "length" : 6,
-                      "possible_answer" : "is Either.Left -> println(\"error: ${result.value}\")\n        is Either.Right -> println(\"success: ${result.value}\")",
-                      "placeholder_text" : "TODO()"
-                    }
-                  ],
-                  "is_visible" : true,
-                  "text" : "import arrow.core.Either\nimport kotlinx.coroutines.delay\nimport kotlinx.coroutines.runBlocking\nimport kotlin.random.Random\n\nsuspend fun calculateSomeValue(): Either<String, Int> {\n    delay(1000)\n    return when (val num = Random.nextInt().mod(10)) {\n        in 0..5 -> Either.Right(num)\n        else -> Either.Left(\"Value was too big\")\n    }\n}\n\nfun main() = runBlocking {\n    when(val result = calculateSomeValue()) {\n        TODO()\n    }\n}\n"
-                }
-              },
-              "description_text" : "<html>\n\n<h2>Either</h2>\n\n<p>The <em>Either</em> type helps us explicitly define a data type that represents both the possible <b>success</b> and <b>failure</b> types of an operation.</p>\n<p>Say we make a request, that we know will return a calculated value, or some exception, we can use an <em>Either</em> to explicitly define both of these states.</p>\n\n<br>\n<h3>\uD83D\uDCA1 Helpful Resources</h3>\n<ul>\n    <li> <a href=\"https://arrow-kt.io/docs/apidocs/arrow-core/arrow.core/-either/\">Either Reference</a> </li>\n</ul>\n\n<br>\n<h3>\uD83D\uDCDD Instructions</h3>\n<p>Implement the <em>when</em> statement to handle both Either subtypes</p>\n\n<br>\n<h3>\uD83E\uDD14 Observations</h3>\n<ul>\n    <li>What types of operations might benefit from this pattern in your own code?</li>\n</ul>\n\n</html>",
-              "description_format" : "HTML",
-              "feedback_link" : {
-                "link_type" : "STEPIK"
-              },
-              "task_type" : "theory"
-            },
-            {
-              "name" : "option",
-              "files" : {
-                "src/Main.kt" : {
-                  "name" : "src/Main.kt",
-                  "placeholders" : [
-                    {
-                      "offset" : 429,
-                      "length" : 6,
-                      "possible_answer" : "is None -> println(\"value was too large\")\n        is Some -> println(\"success: ${result.value}\")",
-                      "placeholder_text" : "TODO()"
-                    }
-                  ],
-                  "is_visible" : true,
-                  "text" : "import arrow.core.None\nimport arrow.core.Option\nimport arrow.core.Some\nimport kotlinx.coroutines.delay\nimport kotlinx.coroutines.runBlocking\nimport kotlin.random.Random\n\nsuspend fun calculateSomeValue(): Option<Int> {\n    delay(1000)\n    return when (val num = Random.nextInt().mod(10)) {\n        in 0..5 -> Some(num)\n        else -> None\n    }\n}\n\nfun main() = runBlocking {\n    when(val result = calculateSomeValue()) {\n        TODO()\n    }\n}\n"
-                }
-              },
-              "description_text" : "<html>\n\n<h2>Option</h2>\n\n<p>The <em>Option</em> type helps us explicitly define a data type in which the value may, or may not, exist.  But if it does exist, we know the explicit type.</p>\n<p>Say we make a request, that we know will return a calculated value, or null, we can use an <em>Option</em> to explicitly define the success case, or use None for the null cases</p>\n\n<br>\n<h3>\uD83D\uDCA1 Helpful Resources</h3>\n<ul>\n    <li> <a href=\"https://arrow-kt.io/docs/apidocs/arrow-core/arrow.core/-option/\">Option Reference</a> </li>\n</ul>\n\n<br>\n<h3>\uD83D\uDCDD Instructions</h3>\n<p>Implement the <em>when</em> statement to handle both Option types</p>\n\n<br>\n<h3>\uD83E\uDD14 Observations</h3>\n<ul>\n    <li>What types of operations might benefit from this pattern in your own code?</li>\n</ul>\n\n</html>",
-              "description_format" : "HTML",
-              "feedback_link" : {
-                "link_type" : "STEPIK"
-              },
-              "task_type" : "theory"
-            },
-            {
-              "name" : "validated",
-              "files" : {
-                "src/Main.kt" : {
-                  "name" : "src/Main.kt",
-                  "placeholders" : [ ],
-                  "is_visible" : true,
-                  "text" : "import arrow.core.*\n\nval invalidEmails = listOf(\n    EmailField(\"nowhere.com\"),\n    EmailField(\"nowheretoolong${(0..251).map { \"g\" }}\"), //this fails\n    EmailField(\"getlost@nowhere.com\")\n)\n\nval validEmails = listOf(\n    EmailField(\"kotlin@jetbrains.com\"),\n    EmailField(\"kotlin@kotlin.dev\"),\n)\n\nfun main() {\n    when (val result = Rules(Strategy.ErrorAccumulation, invalidEmails)) {\n        is Either.Left -> println(\"error: ${result.value.all}\")\n        is Either.Right -> println(\"success: ${result.value}\")\n    }\n}\n"
-                },
-                "src/ValidationError.kt" : {
-                  "name" : "src/ValidationError.kt",
-                  "placeholders" : [ ],
-                  "is_visible" : true,
-                  "text" : "import arrow.core.Nel\n\nsealed class ValidationError(val msg: String) {\n    data class DoesNotContain(val value: String) : ValidationError(\"Did not contain $value\")\n    data class TooLong(val value: Int) : ValidationError(\"Exceeded length of $value\")\n    data class NotAnEmail(val reasons: Nel<ValidationError>) : ValidationError(\"Not a valid email\")\n}"
-                },
-                "src/Rules.kt" : {
-                  "name" : "src/Rules.kt",
-                  "placeholders" : [ ],
-                  "is_visible" : true,
-                  "text" : "import arrow.core.*\nimport arrow.core.computations.either\nimport arrow.typeclasses.Semigroup\n\n/**\n * Enumerate our validation strategies\n */\nenum class Strategy {\n    FailFast, ErrorAccumulation\n}\n\nobject Rules {\n\n    private fun EmailField.containsRequired(pattern: String): ValidatedNel<ValidationError, EmailField> {\n        return if (value.contains(pattern, false)) {\n            validNel()\n        } else {\n            ValidationError.DoesNotContain(pattern).invalidNel()\n        }\n    }\n\n\n    private fun EmailField.isShorterThan(maxLength: Int): ValidatedNel<ValidationError, EmailField> {\n        return if (value.length <= maxLength) {\n            validNel()\n        } else {\n            ValidationError.TooLong(maxLength).invalidNel()\n        }\n    }\n\n    private fun EmailField.validateAccumulateErrors(): ValidatedNel<ValidationError, Email> {\n        return containsRequired(\"@\").zip(Semigroup.nonEmptyList(), isShorterThan(250)) { _, _ ->\n            Email(value)\n        }.handleErrorWith {\n            ValidationError.NotAnEmail(it).invalidNel()\n        }\n    }\n\n    private fun EmailField.validateFailFast(): Either<Nel<ValidationError>, Email> {\n        return either.eager {\n            containsRequired(\"@\").bind() // fails fast on first error found\n            isShorterThan(250).bind()\n\n            // if get to here, we convert into the desired output type\n            Email(value)\n        }\n    }\n\n    operator fun invoke(strategy: Strategy, fields: List<EmailField>): Either<Nel<ValidationError>, List<Email>> =\n        when (strategy) {\n            Strategy.FailFast -> {\n                fields.traverseEither { it.validateFailFast() }\n            }\n            Strategy.ErrorAccumulation -> {\n                fields.traverseValidated(Semigroup.nonEmptyList()) {\n                    it.validateAccumulateErrors()\n                }.toEither()\n            }\n        }\n}"
-                },
-                "src/Email.kt" : {
-                  "name" : "src/Email.kt",
-                  "placeholders" : [ ],
-                  "is_visible" : true,
-                  "text" : "/**\n * Represents the fully validated type that passes all our validation checks\n */\ndata class Email(val value: String)"
-                },
-                "src/EmailField.kt" : {
-                  "name" : "src/EmailField.kt",
-                  "placeholders" : [ ],
-                  "is_visible" : true,
-                  "text" : "/**\n * Represents some incoming form data that a user may have entered\n */\ndata class EmailField(val value: String)"
-                }
-              },
-              "description_text" : "<html>\n\n<h2>Validated</h2>\n\n<p>Similarly to <em>Either</em>, <em>Validated</em> lets us define a success type, or any errors.</p>\n<p>However, whereas <em>Either</em> represents a single error, <em>Validated</em> can allow us to accumulate multiple errors - say if we are validating user input in a form.</p>\n\n<br>\n<h3>\uD83D\uDCA1 Helpful Resources</h3>\n<ul>\n    <li> <a href=\"https://arrow-kt.io/docs/apidocs/arrow-core/arrow.core/-validated/\">Validated Reference</a> </li>\n    <li> <a href=\"https://arrow-kt.io/docs/patterns/error_handling/#alternative-validation-strategies--failing-fast-vs-accumulating-errors\">Failing Fast vs Accumulating Errors</a> </li>\n    <li> <a href=\"https://arrow-kt.io/docs/arrow/core/nonemptylist/\">NonEmptyList (NEL)</a> </li>\n</ul>\n\n<br>\n<h3>\uD83D\uDCDD Instructions</h3>\n<p>Observe the output of the code with both the <em>validEmails</em> and <em>invalidEmails</em> lists.</p>\n\n<br>\n<h3>\uD83E\uDD14 Observations</h3>\n<ul>\n    <li>What questions or ideas does this example prompt?</li>\n    <li>Are there patterns from this code that you could apply to your own projects whether using Arrow.kt or not?</li>\n</ul>\n\n</html>",
-              "description_format" : "HTML",
-              "feedback_link" : {
-                "link_type" : "STEPIK"
-              },
-              "task_type" : "theory"
-            }
-          ],
-          "type" : "lesson"
-        }
-      ],
-      "type" : "section"
     }
   ],
   "additional_files" : [
+    {
+      "name" : "Welcome/getting-started/code-tasks/src/Main.kt",
+      "placeholders" : [ ],
+      "is_visible" : true,
+      "text" : "/**\n * Update/edit Kotlin files to ensure the validations pass\n */\nfun main() {\n    println(\"Validated output goes here\")\n}\n"
+    },
+    {
+      "name" : "Welcome/getting-started/code-tasks/test/output.txt",
+      "placeholders" : [ ],
+      "is_visible" : true,
+      "text" : "Validated output goes here\n"
+    },
+    {
+      "name" : "Welcome/getting-started/getting-started/src/Task.kt",
+      "placeholders" : [ ],
+      "is_visible" : true,
+      "text" : "fun isReadyToStart(): Boolean = true"
+    },
+    {
+      "name" : "Welcome/getting-started/getting-started/test/Tests.kt",
+      "placeholders" : [ ],
+      "is_visible" : true,
+      "text" : "import org.junit.Assert\nimport org.junit.Test\n\nclass Test {\n    @Test fun testSolution() {\n        Assert.assertTrue(\"Are you sure you're not ready to start?\", isReadyToStart())\n    }\n}"
+    },
+    {
+      "name" : "Welcome/getting-started/tracking-progress/src/Task.kt",
+      "placeholders" : [ ],
+      "is_visible" : true,
+      "text" : "// Welcome \uD83D\uDC4B\nfun main() {\n    // nothing to do here in this first task\n}"
+    },
+    {
+      "name" : "Welcome/getting-started/multiple-choice-tasks/src/Main.kt",
+      "placeholders" : [ ],
+      "is_visible" : true,
+      "text" : "fun main() {\n    println(\"Hello World!\")\n}\n"
+    },
     {
       "name" : "build.gradle",
       "placeholders" : [ ],

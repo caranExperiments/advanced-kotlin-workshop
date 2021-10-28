@@ -1,0 +1,6 @@
+custom_name: Functional Types
+content:
+- either
+- option
+- validated
+- result

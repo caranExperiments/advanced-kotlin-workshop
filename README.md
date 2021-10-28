@@ -30,12 +30,16 @@ Other Labs, will require you to setup projects on your own, and then reuse those
   - Ultimate edition will work as well if you've already paid for it
 - EduTools Plugin for JetBrains IDEs
   - [Install via IntelliJ Plugins Settings](https://plugins.jetbrains.com/plugin/10081-edutools)
-- Android Studio 4.2+
+- Android Studio 2020.3.1+
   - [Install via Download Site](https://developer.android.com/studio)
   - [Install via Jetbrains Toolbox](https://www.jetbrains.com/toolbox-app/)
+- Android 12 SDK
+  - [Install via Android Studio SDK Manager](https://developer.android.com/about/versions/12/setup-sdk)
+- Android Emulator
+  - [Create emulator via Android Studio AVD Manager](https://developer.android.com/studio/run/managing-avds)
 - XCode 12.5
   - [Install via App Store](https://apps.apple.com/us/app/xcode/id497799835)
-- JDK 11 or JDK 14
+- JDK 11+
   - [Install via Download Site](https://adoptopenjdk.net/index.html)
   - [Install via Brew](https://github.com/AdoptOpenJDK/homebrew-openjdk)
   - [Setup JAVA_HOME env variable](https://docs.oracle.com/cd/E19182-01/821-0917/inst_jdk_javahome_t/index.html)

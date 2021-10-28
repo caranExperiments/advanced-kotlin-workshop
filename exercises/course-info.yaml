@@ -10,6 +10,6 @@ programming_language: Kotlin
 content:
 - welcome
 - contracts
+- functional
 - coroutines
 - flow
-- arrow
